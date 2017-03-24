@@ -12,6 +12,7 @@ class QuestionTypeViewController: UIViewController, UITableViewDelegate, UITable
 
     @IBOutlet weak var questionTypeTable: UITableView!
     var types = ["Multiple Choice", "True/False", "Matching", "Ranking", "Short Answer", "Essay"]
+    var questionType = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +46,28 @@ class QuestionTypeViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        //Add Later
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            questionType = "MC"
+        } else if indexPath.row == 1 {
+            questionType = "TF"
+        } else if indexPath.row == 2 {
+            questionType = "MT"
+        } else if indexPath.row == 3 {
+            questionType = "RA"
+        } else if indexPath.row == 4 {
+            questionType = "SA"
+        } else if indexPath.row == 5 {
+            questionType = "ES"
+        }
+        self.performSegue(withIdentifier: "typeToText", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "typeToText" {
+            let destination = segue.destination as! QuestionnaireTextViewController
+            destination.questionType = self.questionType
+        }
     }
 
 }

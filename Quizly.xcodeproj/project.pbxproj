@@ -27,6 +27,17 @@
 		237B852C1E7F0E7000C24875 /* CreateQuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B852B1E7F0E7000C24875 /* CreateQuestionnaireViewController.swift */; };
 		237B852E1E7F114100C24875 /* AvailableQuestionnairesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B852D1E7F114100C24875 /* AvailableQuestionnairesViewController.swift */; };
 		237B85301E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B852F1E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift */; };
+		237D18E71E856443001E416B /* QuestionnaireTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18E61E856443001E416B /* QuestionnaireTextViewController.swift */; };
+		237D18EA1E8567AE001E416B /* CreateMultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18E91E8567AE001E416B /* CreateMultipleChoiceViewController.swift */; };
+		237D18EC1E8567C5001E416B /* CreateMultipleChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18EB1E8567C5001E416B /* CreateMultipleChoiceTableViewCell.swift */; };
+		237D18EF1E856C7C001E416B /* CreateTFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18EE1E856C7C001E416B /* CreateTFTableViewCell.swift */; };
+		237D18F11E856C95001E416B /* CreateTFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18F01E856C95001E416B /* CreateTFViewController.swift */; };
+		237D18F81E857353001E416B /* CreateEssayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18F71E857353001E416B /* CreateEssayViewController.swift */; };
+		237D18FA1E85747B001E416B /* CreateSAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18F91E85747B001E416B /* CreateSAViewController.swift */; };
+		237D18FC1E85787B001E416B /* CreateMTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18FB1E85787B001E416B /* CreateMTViewController.swift */; };
+		237D18FE1E857891001E416B /* CreateMTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18FD1E857891001E416B /* CreateMTTableViewCell.swift */; };
+		237D19001E857B10001E416B /* CreateRATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18FF1E857B10001E416B /* CreateRATableViewCell.swift */; };
+		237D19021E857B23001E416B /* CreateRAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D19011E857B23001E416B /* CreateRAViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +84,17 @@
 		237B852B1E7F0E7000C24875 /* CreateQuestionnaireViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestionnaireViewController.swift; sourceTree = "<group>"; };
 		237B852D1E7F114100C24875 /* AvailableQuestionnairesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableQuestionnairesViewController.swift; sourceTree = "<group>"; };
 		237B852F1E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableQuestionnairesTableViewCell.swift; sourceTree = "<group>"; };
+		237D18E61E856443001E416B /* QuestionnaireTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireTextViewController.swift; sourceTree = "<group>"; };
+		237D18E91E8567AE001E416B /* CreateMultipleChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMultipleChoiceViewController.swift; sourceTree = "<group>"; };
+		237D18EB1E8567C5001E416B /* CreateMultipleChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMultipleChoiceTableViewCell.swift; sourceTree = "<group>"; };
+		237D18EE1E856C7C001E416B /* CreateTFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTFTableViewCell.swift; sourceTree = "<group>"; };
+		237D18F01E856C95001E416B /* CreateTFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTFViewController.swift; sourceTree = "<group>"; };
+		237D18F71E857353001E416B /* CreateEssayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEssayViewController.swift; sourceTree = "<group>"; };
+		237D18F91E85747B001E416B /* CreateSAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSAViewController.swift; sourceTree = "<group>"; };
+		237D18FB1E85787B001E416B /* CreateMTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMTViewController.swift; sourceTree = "<group>"; };
+		237D18FD1E857891001E416B /* CreateMTTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMTTableViewCell.swift; sourceTree = "<group>"; };
+		237D18FF1E857B10001E416B /* CreateRATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRATableViewCell.swift; sourceTree = "<group>"; };
+		237D19011E857B23001E416B /* CreateRAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRAViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +189,13 @@
 		237B850B1E7EBF6E00C24875 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				237D18F61E8572F7001E416B /* Essay */,
+				237D18F41E8572E5001E416B /* Short Answer */,
+				237D18F31E8572D9001E416B /* Ranking */,
+				237D18F21E856FAD001E416B /* Matching */,
+				237D18ED1E856C65001E416B /* TrueFalse */,
+				237D18E81E856791001E416B /* MultipleChoice */,
+				237D18E51E856414001E416B /* QuestionnaireText */,
 				237B85241E7ED48F00C24875 /* Main */,
 				237B851F1E7ECF1A00C24875 /* Question Type */,
 				237B851C1E7ECAD100C24875 /* AddQuestion */,
@@ -210,6 +239,66 @@
 				237B852B1E7F0E7000C24875 /* CreateQuestionnaireViewController.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		237D18E51E856414001E416B /* QuestionnaireText */ = {
+			isa = PBXGroup;
+			children = (
+				237D18E61E856443001E416B /* QuestionnaireTextViewController.swift */,
+			);
+			name = QuestionnaireText;
+			sourceTree = "<group>";
+		};
+		237D18E81E856791001E416B /* MultipleChoice */ = {
+			isa = PBXGroup;
+			children = (
+				237D18E91E8567AE001E416B /* CreateMultipleChoiceViewController.swift */,
+				237D18EB1E8567C5001E416B /* CreateMultipleChoiceTableViewCell.swift */,
+			);
+			name = MultipleChoice;
+			sourceTree = "<group>";
+		};
+		237D18ED1E856C65001E416B /* TrueFalse */ = {
+			isa = PBXGroup;
+			children = (
+				237D18EE1E856C7C001E416B /* CreateTFTableViewCell.swift */,
+				237D18F01E856C95001E416B /* CreateTFViewController.swift */,
+			);
+			name = TrueFalse;
+			sourceTree = "<group>";
+		};
+		237D18F21E856FAD001E416B /* Matching */ = {
+			isa = PBXGroup;
+			children = (
+				237D18FB1E85787B001E416B /* CreateMTViewController.swift */,
+				237D18FD1E857891001E416B /* CreateMTTableViewCell.swift */,
+			);
+			name = Matching;
+			sourceTree = "<group>";
+		};
+		237D18F31E8572D9001E416B /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				237D18FF1E857B10001E416B /* CreateRATableViewCell.swift */,
+				237D19011E857B23001E416B /* CreateRAViewController.swift */,
+			);
+			name = Ranking;
+			sourceTree = "<group>";
+		};
+		237D18F41E8572E5001E416B /* Short Answer */ = {
+			isa = PBXGroup;
+			children = (
+				237D18F91E85747B001E416B /* CreateSAViewController.swift */,
+			);
+			name = "Short Answer";
+			sourceTree = "<group>";
+		};
+		237D18F61E8572F7001E416B /* Essay */ = {
+			isa = PBXGroup;
+			children = (
+				237D18F71E857353001E416B /* CreateEssayViewController.swift */,
+			);
+			name = Essay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,19 +438,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237D18EA1E8567AE001E416B /* CreateMultipleChoiceViewController.swift in Sources */,
 				237B852E1E7F114100C24875 /* AvailableQuestionnairesViewController.swift in Sources */,
 				237B84DC1E7EBDB900C24875 /* ViewController.swift in Sources */,
 				237B85131E7EC5B800C24875 /* SelectTypeViewController.swift in Sources */,
+				237D18FA1E85747B001E416B /* CreateSAViewController.swift in Sources */,
 				237B851B1E7ECAC900C24875 /* AddQuestionViewController.swift in Sources */,
+				237D18FE1E857891001E416B /* CreateMTTableViewCell.swift in Sources */,
 				237B84DA1E7EBDB900C24875 /* AppDelegate.swift in Sources */,
+				237D18EC1E8567C5001E416B /* CreateMultipleChoiceTableViewCell.swift in Sources */,
 				237B84E21E7EBDB900C24875 /* Quizly.xcdatamodeld in Sources */,
 				237B851E1E7ECB0800C24875 /* AddQuestionTableViewCell.swift in Sources */,
 				237B85171E7EC8B100C24875 /* TitleViewController.swift in Sources */,
+				237D18F81E857353001E416B /* CreateEssayViewController.swift in Sources */,
+				237D18EF1E856C7C001E416B /* CreateTFTableViewCell.swift in Sources */,
 				237B85151E7EC5CA00C24875 /* SelectTypeTableViewCell.swift in Sources */,
+				237D18FC1E85787B001E416B /* CreateMTViewController.swift in Sources */,
+				237D18F11E856C95001E416B /* CreateTFViewController.swift in Sources */,
 				237B85231E7ED02D00C24875 /* QuestionTypeViewController.swift in Sources */,
 				237B852C1E7F0E7000C24875 /* CreateQuestionnaireViewController.swift in Sources */,
+				237D18E71E856443001E416B /* QuestionnaireTextViewController.swift in Sources */,
 				237B850F1E7EC0D600C24875 /* MainViewController.swift in Sources */,
+				237D19001E857B10001E416B /* CreateRATableViewCell.swift in Sources */,
 				237B85211E7ED00F00C24875 /* QuestionTypeTableViewCell.swift in Sources */,
+				237D19021E857B23001E416B /* CreateRAViewController.swift in Sources */,
 				237B85301E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift in Sources */,
 				237B852A1E7F0E5100C24875 /* CreateQuestionnaireTableViewCell.swift in Sources */,
 			);
@@ -614,6 +714,7 @@
 				237B85031E7EBDB900C24875 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		237B85041E7EBDB900C24875 /* Build configuration list for PBXNativeTarget "QuizlyTests" */ = {
 			isa = XCConfigurationList;
@@ -622,6 +723,7 @@
 				237B85061E7EBDB900C24875 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		237B85071E7EBDB900C24875 /* Build configuration list for PBXNativeTarget "QuizlyUITests" */ = {
 			isa = XCConfigurationList;
@@ -630,6 +732,7 @@
 				237B85091E7EBDB900C24875 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
