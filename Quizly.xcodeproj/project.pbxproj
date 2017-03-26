@@ -189,12 +189,7 @@
 		237B850B1E7EBF6E00C24875 /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				237D18F61E8572F7001E416B /* Essay */,
-				237D18F41E8572E5001E416B /* Short Answer */,
-				237D18F31E8572D9001E416B /* Ranking */,
-				237D18F21E856FAD001E416B /* Matching */,
-				237D18ED1E856C65001E416B /* TrueFalse */,
-				237D18E81E856791001E416B /* MultipleChoice */,
+				237D19031E857C73001E416B /* Makers */,
 				237D18E51E856414001E416B /* QuestionnaireText */,
 				237B85241E7ED48F00C24875 /* Main */,
 				237B851F1E7ECF1A00C24875 /* Question Type */,
@@ -299,6 +294,19 @@
 				237D18F71E857353001E416B /* CreateEssayViewController.swift */,
 			);
 			name = Essay;
+			sourceTree = "<group>";
+		};
+		237D19031E857C73001E416B /* Makers */ = {
+			isa = PBXGroup;
+			children = (
+				237D18E81E856791001E416B /* MultipleChoice */,
+				237D18ED1E856C65001E416B /* TrueFalse */,
+				237D18F21E856FAD001E416B /* Matching */,
+				237D18F31E8572D9001E416B /* Ranking */,
+				237D18F41E8572E5001E416B /* Short Answer */,
+				237D18F61E8572F7001E416B /* Essay */,
+			);
+			name = Makers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
