@@ -39,6 +39,8 @@
 		237D19001E857B10001E416B /* CreateRATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18FF1E857B10001E416B /* CreateRATableViewCell.swift */; };
 		237D19021E857B23001E416B /* CreateRAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D19011E857B23001E416B /* CreateRAViewController.swift */; };
 		237D19051E87E745001E416B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237D19041E87E745001E416B /* GoogleService-Info.plist */; };
+		23C4DE5F1E8836AB00E46E45 /* EditQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE5E1E8836AB00E46E45 /* EditQuestionsViewController.swift */; };
+		23C4DE611E8836C300E46E45 /* EditQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE601E8836C300E46E45 /* EditQuestionsTableViewCell.swift */; };
 		3AC84228E95A4CBF9C783C8C /* Pods_QuizlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */; };
 		959729B9A85D4A0E4BCCD32A /* Pods_Quizly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */; };
 		C2E81958D6352E958741A58F /* Pods_QuizlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D66C8BCAFD10D0D989722E /* Pods_QuizlyUITests.framework */; };
@@ -103,6 +105,8 @@
 		237D18FF1E857B10001E416B /* CreateRATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRATableViewCell.swift; sourceTree = "<group>"; };
 		237D19011E857B23001E416B /* CreateRAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRAViewController.swift; sourceTree = "<group>"; };
 		237D19041E87E745001E416B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23C4DE5E1E8836AB00E46E45 /* EditQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuestionsViewController.swift; sourceTree = "<group>"; };
+		23C4DE601E8836C300E46E45 /* EditQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quizly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		609A8D806408005FA0666B1B /* Pods-QuizlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyUITests/Pods-QuizlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +213,7 @@
 		237B850B1E7EBF6E00C24875 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				23C4DE5D1E88368000E46E45 /* Edit */,
 				237D19031E857C73001E416B /* Makers */,
 				237D18E51E856414001E416B /* QuestionnaireText */,
 				237B85241E7ED48F00C24875 /* Main */,
@@ -327,6 +332,15 @@
 				237D18F61E8572F7001E416B /* Essay */,
 			);
 			name = Makers;
+			sourceTree = "<group>";
+		};
+		23C4DE5D1E88368000E46E45 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				23C4DE5E1E8836AB00E46E45 /* EditQuestionsViewController.swift */,
+				23C4DE601E8836C300E46E45 /* EditQuestionsTableViewCell.swift */,
+			);
+			name = Edit;
 			sourceTree = "<group>";
 		};
 		5168503F538050E9C55CA782 /* Frameworks */ = {
@@ -659,7 +673,9 @@
 				237D18E71E856443001E416B /* QuestionnaireTextViewController.swift in Sources */,
 				237B850F1E7EC0D600C24875 /* MainViewController.swift in Sources */,
 				237D19001E857B10001E416B /* CreateRATableViewCell.swift in Sources */,
+				23C4DE611E8836C300E46E45 /* EditQuestionsTableViewCell.swift in Sources */,
 				237B85211E7ED00F00C24875 /* QuestionTypeTableViewCell.swift in Sources */,
+				23C4DE5F1E8836AB00E46E45 /* EditQuestionsViewController.swift in Sources */,
 				237D19021E857B23001E416B /* CreateRAViewController.swift in Sources */,
 				237B85301E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift in Sources */,
 				237B852A1E7F0E5100C24875 /* CreateQuestionnaireTableViewCell.swift in Sources */,

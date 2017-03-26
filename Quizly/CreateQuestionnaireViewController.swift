@@ -15,13 +15,15 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
     //VARIABLES
     @IBOutlet weak var createQuestionnaireTable: UITableView!
     var surveyDictionary = [String:AnyObject]()
+    var surveyCodes = [String]()
+    var quizCodes = [String]()
     var quizDictionary = [String:AnyObject]()
+    var selectedCode = ""
     var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        
         //Delegate
         createQuestionnaireTable.delegate = self
         createQuestionnaireTable.dataSource = self
@@ -61,7 +63,8 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
         if indexPath.section == 0 {
             var loopCount = 0
             for quiz in quizDictionary{
-                if indexPath.row == loopCount {
+                if indexPath.row == loopCount{
+                    quizCodes.append(quiz.key)
                     let quizName = quizDictionary[quiz.0]?["title"] as! String
                     cell.textLabel?.text = quizName
                 }
@@ -71,6 +74,7 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
             var loopCount = 0
             for survey in surveyDictionary{
                 if indexPath.row == loopCount {
+                    surveyCodes.append(survey.key)
                     let surveyName = surveyDictionary[survey.0]?["title"] as! String
                     cell.textLabel?.text = surveyName
                 }
@@ -83,8 +87,22 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 2 {
+        if indexPath.section == 0 {
+            selectedCode = quizCodes[indexPath.row]
+            self.performSegue(withIdentifier: "createQuestionnaireToEdit", sender: self)
+        } else if indexPath.section == 1 {
+            selectedCode = quizCodes[indexPath.row]
+            self.performSegue(withIdentifier: "createQuestionnaireToEdit", sender: self)
+        } else if indexPath.section == 2 {
             self.performSegue(withIdentifier: "createQuestionnaireToType", sender: self)
+        }
+        print(selectedCode)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createQuestionnaireToEdit" {
+            let destination = segue.destination as! EditQuestionsViewController
+            destination.selectedCode = selectedCode
         }
     }
     
