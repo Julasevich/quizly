@@ -19,6 +19,7 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
     var quizCodes = [String]()
     var quizDictionary = [String:AnyObject]()
     var selectedCode = ""
+    var selectedType = ""
     var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
@@ -89,9 +90,11 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             selectedCode = quizCodes[indexPath.row]
+            selectedType = "Quiz"
             self.performSegue(withIdentifier: "createQuestionnaireToEdit", sender: self)
         } else if indexPath.section == 1 {
-            selectedCode = quizCodes[indexPath.row]
+            selectedCode = surveyCodes[indexPath.row]
+            selectedType = "Survey"
             self.performSegue(withIdentifier: "createQuestionnaireToEdit", sender: self)
         } else if indexPath.section == 2 {
             self.performSegue(withIdentifier: "createQuestionnaireToType", sender: self)
@@ -103,6 +106,7 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
         if segue.identifier == "createQuestionnaireToEdit" {
             let destination = segue.destination as! EditQuestionsViewController
             destination.selectedCode = selectedCode
+            destination.selectedType = selectedType
         }
     }
     
