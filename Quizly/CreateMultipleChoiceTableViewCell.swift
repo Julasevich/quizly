@@ -10,6 +10,9 @@ import UIKit
 
 class CreateMultipleChoiceTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var optionTF: UITextField!
+    @IBOutlet weak var correctLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

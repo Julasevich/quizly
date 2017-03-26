@@ -10,6 +10,9 @@ import UIKit
 
 class CreateMTTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var rightTF: UITextField!
+    @IBOutlet weak var leftTF: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

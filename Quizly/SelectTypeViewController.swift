@@ -13,6 +13,7 @@ class SelectTypeViewController: UIViewController, UITableViewDelegate, UITableVi
     //VARIABLES
     @IBOutlet weak var selectTypeTable: UITableView!
     var types = ["Quiz/Test", "Survey"]
+    var questionnaireType = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,19 @@ class SelectTypeViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            questionnaireType = "Quiz"
+        } else {
+            questionnaireType = "Survey"
+        }
         self.performSegue(withIdentifier: "selectTypeToTitle", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectTypeToTitle" {
+            let destination = segue.destination as! TitleViewController
+            destination.questionnaireType = self.questionnaireType
+        }
     }
 
 }

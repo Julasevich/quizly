@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //VARIABLES
     @IBOutlet weak var createQuestionnaireTable: UITableView!
-    var questionnaires = [String]()
+    var surveyDictionary = [String:AnyObject]()
+    var quizDictionary = [String:AnyObject]()
+    var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getData()
+        
         //Delegate
         createQuestionnaireTable.delegate = self
         createQuestionnaireTable.dataSource = self
@@ -28,31 +33,75 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Available Questionnaires"
+        if section == 0 {
+            return "Quizes/Tests"
+        } else if section == 1 {
+            return "Surveys"
+        } else {
+            return ""
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questionnaires.count + 1
+        if section == 0 {
+            return quizDictionary.count
+        } else if section == 1 {
+            return surveyDictionary.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "createQuestionnaireCell", for: indexPath) as! CreateQuestionnaireTableViewCell
-        if indexPath.row != questionnaires.count{
-            //Question Cell
-            cell.textLabel?.text = "Questionnaire \(indexPath.row)"
-        } else {
-            //Add Question Cell
+        if indexPath.section == 0 {
+            var loopCount = 0
+            for quiz in quizDictionary{
+                if indexPath.row == loopCount {
+                    let quizName = quizDictionary[quiz.0]?["title"] as! String
+                    cell.textLabel?.text = quizName
+                }
+                loopCount += 1
+            }
+        } else if indexPath.section == 1 {
+            var loopCount = 0
+            for survey in surveyDictionary{
+                if indexPath.row == loopCount {
+                    let surveyName = surveyDictionary[survey.0]?["title"] as! String
+                    cell.textLabel?.text = surveyName
+                }
+                loopCount += 1
+            }
+        } else if indexPath.section == 2 {
             cell.textLabel?.text = "Add Questionnaire"
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "createQuestionnaireToType", sender: self)
+        if indexPath.section == 2 {
+            self.performSegue(withIdentifier: "createQuestionnaireToType", sender: self)
+        }
+    }
+    
+    func getData() {
+        ref = FIRDatabase.database().reference()
+        ref.child("Quiz or Test").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let quizDict = snapshot.value as? [String:AnyObject] {
+                self.quizDictionary = quizDict
+                self.createQuestionnaireTable.reloadData()
+            }
+        })
+        ref.child("Survey").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let surveyDict = snapshot.value as? [String:AnyObject] {
+                self.surveyDictionary = surveyDict
+                self.createQuestionnaireTable.reloadData()
+            }
+        })
     }
     
 

@@ -38,6 +38,10 @@
 		237D18FE1E857891001E416B /* CreateMTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18FD1E857891001E416B /* CreateMTTableViewCell.swift */; };
 		237D19001E857B10001E416B /* CreateRATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D18FF1E857B10001E416B /* CreateRATableViewCell.swift */; };
 		237D19021E857B23001E416B /* CreateRAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237D19011E857B23001E416B /* CreateRAViewController.swift */; };
+		237D19051E87E745001E416B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237D19041E87E745001E416B /* GoogleService-Info.plist */; };
+		3AC84228E95A4CBF9C783C8C /* Pods_QuizlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */; };
+		959729B9A85D4A0E4BCCD32A /* Pods_Quizly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */; };
+		C2E81958D6352E958741A58F /* Pods_QuizlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D66C8BCAFD10D0D989722E /* Pods_QuizlyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D66C8BCAFD10D0D989722E /* Pods_QuizlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1516642962687E7F247050EE /* Pods-QuizlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyTests/Pods-QuizlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F4750F4963AEA64987319A8 /* Pods-Quizly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quizly/Pods-Quizly.release.xcconfig"; sourceTree = "<group>"; };
 		237B84D61E7EBDB900C24875 /* Quizly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237B84D91E7EBDB900C24875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		237B84DB1E7EBDB900C24875 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +102,13 @@
 		237D18FD1E857891001E416B /* CreateMTTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMTTableViewCell.swift; sourceTree = "<group>"; };
 		237D18FF1E857B10001E416B /* CreateRATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRATableViewCell.swift; sourceTree = "<group>"; };
 		237D19011E857B23001E416B /* CreateRAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRAViewController.swift; sourceTree = "<group>"; };
+		237D19041E87E745001E416B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quizly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		609A8D806408005FA0666B1B /* Pods-QuizlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyUITests/Pods-QuizlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA046484A56FD62DD3DE2B9 /* Pods-QuizlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyTests/Pods-QuizlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		AFFF92A6F7D11FF01601A69F /* Pods-Quizly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quizly/Pods-Quizly.debug.xcconfig"; sourceTree = "<group>"; };
+		BAF786D73F2479180FFCB845 /* Pods-QuizlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyUITests/Pods-QuizlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959729B9A85D4A0E4BCCD32A /* Pods_Quizly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC84228E95A4CBF9C783C8C /* Pods_QuizlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E81958D6352E958741A58F /* Pods_QuizlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +146,8 @@
 				237B84F01E7EBDB900C24875 /* QuizlyTests */,
 				237B84FB1E7EBDB900C24875 /* QuizlyUITests */,
 				237B84D71E7EBDB900C24875 /* Products */,
+				DC898C600B1C268EC1515F4A /* Pods */,
+				5168503F538050E9C55CA782 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +172,7 @@
 				237B84DD1E7EBDB900C24875 /* Main.storyboard */,
 				237B84E31E7EBDB900C24875 /* Assets.xcassets */,
 				237B84E51E7EBDB900C24875 /* LaunchScreen.storyboard */,
+				237D19041E87E745001E416B /* GoogleService-Info.plist */,
 				237B84E81E7EBDB900C24875 /* Info.plist */,
 				237B84E01E7EBDB900C24875 /* Quizly.xcdatamodeld */,
 			);
@@ -309,6 +329,29 @@
 			name = Makers;
 			sourceTree = "<group>";
 		};
+		5168503F538050E9C55CA782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */,
+				8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */,
+				00D66C8BCAFD10D0D989722E /* Pods_QuizlyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC898C600B1C268EC1515F4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF92A6F7D11FF01601A69F /* Pods-Quizly.debug.xcconfig */,
+				1F4750F4963AEA64987319A8 /* Pods-Quizly.release.xcconfig */,
+				1516642962687E7F247050EE /* Pods-QuizlyTests.debug.xcconfig */,
+				9BA046484A56FD62DD3DE2B9 /* Pods-QuizlyTests.release.xcconfig */,
+				609A8D806408005FA0666B1B /* Pods-QuizlyUITests.debug.xcconfig */,
+				BAF786D73F2479180FFCB845 /* Pods-QuizlyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -316,9 +359,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 237B85011E7EBDB900C24875 /* Build configuration list for PBXNativeTarget "Quizly" */;
 			buildPhases = (
+				EAF69E453C3817FBE3387300 /* [CP] Check Pods Manifest.lock */,
 				237B84D21E7EBDB900C24875 /* Sources */,
 				237B84D31E7EBDB900C24875 /* Frameworks */,
 				237B84D41E7EBDB900C24875 /* Resources */,
+				C2276C81AE040FA25AD8A151 /* [CP] Embed Pods Frameworks */,
+				B4FF67E0551C3A6A7E537B1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,9 +379,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 237B85041E7EBDB900C24875 /* Build configuration list for PBXNativeTarget "QuizlyTests" */;
 			buildPhases = (
+				3CBA26386306A1D707B95298 /* [CP] Check Pods Manifest.lock */,
 				237B84E91E7EBDB900C24875 /* Sources */,
 				237B84EA1E7EBDB900C24875 /* Frameworks */,
 				237B84EB1E7EBDB900C24875 /* Resources */,
+				7F703E408661B46039045975 /* [CP] Embed Pods Frameworks */,
+				017CCE466950524AB965DA74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,9 +400,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 237B85071E7EBDB900C24875 /* Build configuration list for PBXNativeTarget "QuizlyUITests" */;
 			buildPhases = (
+				5D9AEC9294142639092CE80F /* [CP] Check Pods Manifest.lock */,
 				237B84F41E7EBDB900C24875 /* Sources */,
 				237B84F51E7EBDB900C24875 /* Frameworks */,
 				237B84F61E7EBDB900C24875 /* Resources */,
+				FD25998F954E5783B883F624 /* [CP] Embed Pods Frameworks */,
+				C62354FCCB06C24A918D62DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -420,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				237B84E71E7EBDB900C24875 /* LaunchScreen.storyboard in Resources */,
+				237D19051E87E745001E416B /* GoogleService-Info.plist in Resources */,
 				237B84E41E7EBDB900C24875 /* Assets.xcassets in Resources */,
 				237B84DF1E7EBDB900C24875 /* Main.storyboard in Resources */,
 			);
@@ -440,6 +493,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		017CCE466950524AB965DA74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuizlyTests/Pods-QuizlyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CBA26386306A1D707B95298 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D9AEC9294142639092CE80F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F703E408661B46039045975 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuizlyTests/Pods-QuizlyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4FF67E0551C3A6A7E537B1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quizly/Pods-Quizly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2276C81AE040FA25AD8A151 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quizly/Pods-Quizly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C62354FCCB06C24A918D62DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuizlyUITests/Pods-QuizlyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAF69E453C3817FBE3387300 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD25998F954E5783B883F624 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuizlyUITests/Pods-QuizlyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		237B84D21E7EBDB900C24875 /* Sources */ = {
@@ -621,6 +812,7 @@
 		};
 		237B85021E7EBDB900C24875 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFFF92A6F7D11FF01601A69F /* Pods-Quizly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C83L888FQQ;
@@ -634,6 +826,7 @@
 		};
 		237B85031E7EBDB900C24875 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4750F4963AEA64987319A8 /* Pods-Quizly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C83L888FQQ;
@@ -647,6 +840,7 @@
 		};
 		237B85051E7EBDB900C24875 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1516642962687E7F247050EE /* Pods-QuizlyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -662,6 +856,7 @@
 		};
 		237B85061E7EBDB900C24875 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BA046484A56FD62DD3DE2B9 /* Pods-QuizlyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -677,6 +872,7 @@
 		};
 		237B85081E7EBDB900C24875 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609A8D806408005FA0666B1B /* Pods-QuizlyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = C83L888FQQ;
@@ -691,6 +887,7 @@
 		};
 		237B85091E7EBDB900C24875 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF786D73F2479180FFCB845 /* Pods-QuizlyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = C83L888FQQ;

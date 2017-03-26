@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class CreateMTViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var createMTTable: UITableView!
-    var options = [String]()
+    var questionText = ""
+    var ref: FIRDatabaseReference!
+    var leftOptions = [String]()
+    var rightOptions = [String]()
+    var questionID = ""
+    var questionnaireType = ""
+    var questionnaireID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Right Buttons
+        let addBtn:UIBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addQuestion))
+        let saveBtn:UIBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveOptions))
+        self.navigationItem.rightBarButtonItems = [addBtn, saveBtn]
         
         //Delegate
         createMTTable.delegate = self
@@ -36,14 +48,15 @@ class CreateMTViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return options.count + 1
+        return leftOptions.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row != options.count{
+        if indexPath.row != leftOptions.count{
             //Question Cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "createMTCell", for: indexPath) as! CreateMTTableViewCell
-            cell.textLabel?.text = "\(options[indexPath.row])"
+            leftOptions[indexPath.row] = cell.leftTF.text!
+            rightOptions[indexPath.row] = cell.rightTF.text!
             return cell
         } else {
             //Add Question Cell
@@ -54,13 +67,50 @@ class CreateMTViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == options.count {
+        if indexPath.row == leftOptions.count {
             createMTTable.beginUpdates()
-            createMTTable.insertRows(at: [IndexPath(row: options.count, section:0)], with: .automatic)
-            options.append("")
+            createMTTable.insertRows(at: [IndexPath(row: leftOptions.count, section:0)], with: .automatic)
+            leftOptions.append("")
+            rightOptions.append("")
             createMTTable.endUpdates()
+            createMTTable.reloadData()
         }
         
+    }
+    
+    func addQuestion() {
+        //Save Options
+        ref = FIRDatabase.database().reference()
+        questionID = createID()
+ 
+        self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
+        self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("left options").setValue(leftOptions)
+        self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("right options").setValue(rightOptions)
+        self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("type").setValue("MT")
+        self.performSegue(withIdentifier: "addMTToAddQuestion", sender: self)
+    }
+    
+    func saveOptions() {
+        createMTTable.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addMTToAddQuestion" {
+            let destination = segue.destination as! AddQuestionViewController
+            destination.questionnaireID = questionnaireID
+            destination.questionnaireType = questionnaireType
+        }
+    }
+    
+    func createID() -> String {
+        var i = 0
+        var id = ""
+        while i < 10 {
+            let randomNum:UInt32 = arc4random_uniform(9)
+            id += String(randomNum)
+            i += 1
+        }
+        return id
     }
 
 }

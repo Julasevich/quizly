@@ -13,6 +13,9 @@ class QuestionTypeViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var questionTypeTable: UITableView!
     var types = ["Multiple Choice", "True/False", "Matching", "Ranking", "Short Answer", "Essay"]
     var questionType = ""
+    var questionnaireType = ""
+    var questionnaireID = ""
+    var questionCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +70,9 @@ class QuestionTypeViewController: UIViewController, UITableViewDelegate, UITable
         if segue.identifier == "typeToText" {
             let destination = segue.destination as! QuestionnaireTextViewController
             destination.questionType = self.questionType
+            destination.questionnaireType = self.questionnaireType
+            destination.questionCount = self.questionCount
+            destination.questionnaireID = self.questionnaireID
         }
     }
 

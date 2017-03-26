@@ -10,6 +10,10 @@ import UIKit
 
 class CreateRATableViewCell: UITableViewCell {
 
+    @IBOutlet weak var optionTF: UITextField!
+    @IBOutlet weak var rankTF: UITextField!
+    @IBOutlet weak var rankLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
