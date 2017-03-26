@@ -90,7 +90,7 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
     
     func getData() {
         ref = FIRDatabase.database().reference()
-        ref.child("Quiz or Test").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("Quiz").observeSingleEvent(of: .value, with: { (snapshot) in
             if let quizDict = snapshot.value as? [String:AnyObject] {
                 self.quizDictionary = quizDict
                 self.createQuestionnaireTable.reloadData()

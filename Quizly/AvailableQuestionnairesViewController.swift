@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class AvailableQuestionnairesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var availableQuestionnairesTable: UITableView!
-    
-    var quizes = [String]()
-    var surveys = [String]()
+    var surveyDictionary = [String:AnyObject]()
+    var quizDictionary = [String:AnyObject]()
+    var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getData()
         //Delegate
         availableQuestionnairesTable.delegate = self
         availableQuestionnairesTable.dataSource = self
@@ -42,39 +44,68 @@ class AvailableQuestionnairesViewController: UIViewController, UITableViewDelega
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            if quizes.count == 0 {
+            if quizDictionary.count == 0 {
                 return 1
             } else {
-                return quizes.count
+                return quizDictionary.count
             }
         } else {
-            if surveys.count == 0 {
+            if surveyDictionary.count == 0 {
                 return 1
             } else {
-                return surveys.count
+                return surveyDictionary.count
             }
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "availableQuestionnaires", for: indexPath) as! AvailableQuestionnairesTableViewCell
+        print(quizDictionary)
+        print(surveyDictionary)
         if indexPath.section == 0 {
-            //Quizes
-            if quizes.count == 0 {
-                //Empty
-                cell.textLabel?.text = "None available."
+            if quizDictionary.count == 0 {
+                cell.textLabel?.text = "None Available"
             } else {
-                cell.textLabel?.text = "Quiz \(indexPath.row)"
+                var loopCount = 0
+                for quiz in quizDictionary{
+                    if indexPath.row == loopCount {
+                        let quizName = quizDictionary[quiz.0]?["title"] as! String
+                        cell.textLabel?.text = quizName
+                    }
+                    loopCount += 1
+                }
             }
-        } else {
-            if surveys.count == 0 {
-                //Empty
-                cell.textLabel?.text = "None available."
+        } else if indexPath.section == 1 {
+            if surveyDictionary.count == 0 {
+                cell.textLabel?.text = "None Available"
             } else {
-                cell.textLabel?.text = "Quiz \(indexPath.row)"
+                var loopCount = 0
+                for survey in surveyDictionary{
+                    if indexPath.row == loopCount {
+                        let surveyName = surveyDictionary[survey.0]?["title"] as! String
+                        cell.textLabel?.text = surveyName
+                    }
+                    loopCount += 1
+                }
             }
         }
         return cell
+    }
+    
+    func getData() {
+        ref = FIRDatabase.database().reference()
+        ref.child("Quiz").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let quizDict = snapshot.value as? [String:AnyObject] {
+                self.quizDictionary = quizDict
+                self.availableQuestionnairesTable.reloadData()
+            }
+        })
+        ref.child("Survey").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let surveyDict = snapshot.value as? [String:AnyObject] {
+                self.surveyDictionary = surveyDict
+                self.availableQuestionnairesTable.reloadData()
+            }
+        })
     }
 
 }
