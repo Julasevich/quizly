@@ -15,7 +15,9 @@ class EditQuestionsViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var editQuestionnaireTable: UITableView!
     var selectedCode = ""
     var selectedType = ""
+    var selectedQuestionCode = ""
     var questionDictionary = [String:AnyObject]()
+    var questionCodes = [String]()
     var ref: FIRDatabaseReference!
 
 
@@ -52,10 +54,17 @@ class EditQuestionsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == questionDictionary.count {
-            self.performSegue(withIdentifier: "addQuestionToSelectType", sender: self)
+        selectedQuestionCode = questionCodes[indexPath.row]
+        self.performSegue(withIdentifier: "editToEditText", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editToEditText" {
+            let destination = segue.destination as! EditQuestionTextViewController
+            destination.selectedCode = selectedCode
+            destination.selectedType = selectedType
+            destination.selectedQuestionCode = selectedQuestionCode
         }
-        
     }
     
     func getData() {
@@ -64,6 +73,9 @@ class EditQuestionsViewController: UIViewController, UITableViewDataSource, UITa
             if let questionDict = snapshot.value as? [String:AnyObject] {
                 self.questionDictionary = questionDict
                 self.editQuestionnaireTable.reloadData()
+                for question in questionDict {
+                    self.questionCodes.append(question.key)
+                }
             }
         })
     }
