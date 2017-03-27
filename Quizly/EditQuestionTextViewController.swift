@@ -22,6 +22,11 @@ class EditQuestionTextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
+        
+        //Right Buttons
+        let addBtn:UIBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextSection))
+        let saveBtn:UIBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveText))
+        self.navigationItem.rightBarButtonItems = [addBtn, saveBtn]
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,5 +41,14 @@ class EditQuestionTextViewController: UIViewController {
             self.questionText = snapshot.value as! String
             self.questionTextTV.text = self.questionText
         })
+    }
+    
+    func nextSection() {
+        
+    }
+    
+    func saveText() {
+        ref = FIRDatabase.database().reference()
+        ref.child(selectedType).child(selectedCode).child("questions").child(selectedQuestionCode).child("text").setValue(self.questionTextTV.text)
     }
 }
