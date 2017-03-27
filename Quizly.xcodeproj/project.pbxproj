@@ -43,6 +43,9 @@
 		23C4DE611E8836C300E46E45 /* EditQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE601E8836C300E46E45 /* EditQuestionsTableViewCell.swift */; };
 		23C4DE651E89312F00E46E45 /* EditQuestionTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE641E89312F00E46E45 /* EditQuestionTextViewController.swift */; };
 		3AC84228E95A4CBF9C783C8C /* Pods_QuizlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */; };
+		5220F9CE1E89C72B008D9BA0 /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220F9CD1E89C72B008D9BA0 /* Questionnaire.swift */; };
+		5220F9D01E89D28E008D9BA0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220F9CF1E89D28E008D9BA0 /* Question.swift */; };
+		5220F9D21E89D2C0008D9BA0 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220F9D11E89D2C0008D9BA0 /* Answers.swift */; };
 		959729B9A85D4A0E4BCCD32A /* Pods_Quizly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */; };
 		C2E81958D6352E958741A58F /* Pods_QuizlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D66C8BCAFD10D0D989722E /* Pods_QuizlyUITests.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +113,9 @@
 		23C4DE601E8836C300E46E45 /* EditQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		23C4DE641E89312F00E46E45 /* EditQuestionTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuestionTextViewController.swift; sourceTree = "<group>"; };
 		3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quizly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5220F9CD1E89C72B008D9BA0 /* Questionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
+		5220F9CF1E89D28E008D9BA0 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5220F9D11E89D2C0008D9BA0 /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		609A8D806408005FA0666B1B /* Pods-QuizlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyUITests/Pods-QuizlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA046484A56FD62DD3DE2B9 /* Pods-QuizlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyTests/Pods-QuizlyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -366,6 +372,9 @@
 		23C4DE661E893B2C00E46E45 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				5220F9CD1E89C72B008D9BA0 /* Questionnaire.swift */,
+				5220F9CF1E89D28E008D9BA0 /* Question.swift */,
+				5220F9D11E89D2C0008D9BA0 /* Answers.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -470,7 +479,7 @@
 				TargetAttributes = {
 					237B84D51E7EBDB900C24875 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = C83L888FQQ;
+						DevelopmentTeam = U57BQ7LWFP;
 						ProvisioningStyle = Automatic;
 					};
 					237B84EC1E7EBDB900C24875 = {
@@ -683,13 +692,16 @@
 				237B84DC1E7EBDB900C24875 /* ViewController.swift in Sources */,
 				237B85131E7EC5B800C24875 /* SelectTypeViewController.swift in Sources */,
 				237D18FA1E85747B001E416B /* CreateSAViewController.swift in Sources */,
+				5220F9CE1E89C72B008D9BA0 /* Questionnaire.swift in Sources */,
 				237B851B1E7ECAC900C24875 /* AddQuestionViewController.swift in Sources */,
 				237D18FE1E857891001E416B /* CreateMTTableViewCell.swift in Sources */,
 				237B84DA1E7EBDB900C24875 /* AppDelegate.swift in Sources */,
 				237D18EC1E8567C5001E416B /* CreateMultipleChoiceTableViewCell.swift in Sources */,
 				237B84E21E7EBDB900C24875 /* Quizly.xcdatamodeld in Sources */,
+				5220F9D21E89D2C0008D9BA0 /* Answers.swift in Sources */,
 				237B851E1E7ECB0800C24875 /* AddQuestionTableViewCell.swift in Sources */,
 				237B85171E7EC8B100C24875 /* TitleViewController.swift in Sources */,
+				5220F9D01E89D28E008D9BA0 /* Question.swift in Sources */,
 				237D18F81E857353001E416B /* CreateEssayViewController.swift in Sources */,
 				237D18EF1E856C7C001E416B /* CreateTFTableViewCell.swift in Sources */,
 				23C4DE651E89312F00E46E45 /* EditQuestionTextViewController.swift in Sources */,
@@ -859,7 +871,7 @@
 			baseConfigurationReference = AFFF92A6F7D11FF01601A69F /* Pods-Quizly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C83L888FQQ;
+				DEVELOPMENT_TEAM = U57BQ7LWFP;
 				INFOPLIST_FILE = Quizly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QuizlyLLC.Quizly;
@@ -873,7 +885,7 @@
 			baseConfigurationReference = 1F4750F4963AEA64987319A8 /* Pods-Quizly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C83L888FQQ;
+				DEVELOPMENT_TEAM = U57BQ7LWFP;
 				INFOPLIST_FILE = Quizly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QuizlyLLC.Quizly;
