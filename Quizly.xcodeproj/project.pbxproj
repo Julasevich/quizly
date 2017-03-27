@@ -170,6 +170,7 @@
 		237B84D81E7EBDB900C24875 /* Quizly */ = {
 			isa = PBXGroup;
 			children = (
+				23C4DE661E893B2C00E46E45 /* Objects */,
 				237B850E1E7EC0D600C24875 /* MainViewController.swift */,
 				237B850B1E7EBF6E00C24875 /* Create */,
 				237B850A1E7EBF6100C24875 /* Take */,
@@ -360,6 +361,13 @@
 				23C4DE641E89312F00E46E45 /* EditQuestionTextViewController.swift */,
 			);
 			name = Text;
+			sourceTree = "<group>";
+		};
+		23C4DE661E893B2C00E46E45 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		5168503F538050E9C55CA782 /* Frameworks */ = {
