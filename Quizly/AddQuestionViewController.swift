@@ -26,6 +26,9 @@ class AddQuestionViewController: UIViewController, UITableViewDelegate, UITableV
         //Delegate
         addQuestionTable.delegate = self
         addQuestionTable.dataSource = self
+        
+        let doneBtn:UIBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(returnToQuestionaaireList))
+        self.navigationItem.rightBarButtonItems = [doneBtn]
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +36,10 @@ class AddQuestionViewController: UIViewController, UITableViewDelegate, UITableV
         // Dispose of any resources that can be recreated.
     }
     
+    func returnToQuestionaaireList()
+    {
+        self.performSegue(withIdentifier: "addQuestionToShowAvailableQuestionnaires", sender: self)
+    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
