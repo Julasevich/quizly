@@ -36,10 +36,6 @@ class AddQuestionViewController: UIViewController, UITableViewDelegate, UITableV
         // Dispose of any resources that can be recreated.
     }
     
-    func returnToQuestionaaireList()
-    {
-        self.performSegue(withIdentifier: "addQuestionToShowAvailableQuestionnaires", sender: self)
-    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -83,12 +79,16 @@ class AddQuestionViewController: UIViewController, UITableViewDelegate, UITableV
     
     func getData() {
         ref = FIRDatabase.database().reference()
-        ref.child("Quiz or Test").child(questionnaireID).child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child(questionnaireType).child(questionnaireID).child("questions").observeSingleEvent(of: .value, with: { (snapshot) in
             if let questionDict = snapshot.value as? [String:AnyObject] {
                 self.questionDictionary = questionDict
                 self.addQuestionTable.reloadData()
             }
         })
+    }
+    
+    func returnToQuestionaaireList() {
+        self.performSegue(withIdentifier: "addQuestionToMain", sender: self)
     }
 
 }

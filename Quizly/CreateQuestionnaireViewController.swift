@@ -24,6 +24,7 @@ class CreateQuestionnaireViewController: UIViewController, UITableViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createQuestionnaireTable.reloadData()
         getData()
         //Delegate
         createQuestionnaireTable.delegate = self

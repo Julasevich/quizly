@@ -42,6 +42,8 @@
 		23C4DE5F1E8836AB00E46E45 /* EditQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE5E1E8836AB00E46E45 /* EditQuestionsViewController.swift */; };
 		23C4DE611E8836C300E46E45 /* EditQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE601E8836C300E46E45 /* EditQuestionsTableViewCell.swift */; };
 		23C4DE651E89312F00E46E45 /* EditQuestionTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE641E89312F00E46E45 /* EditQuestionTextViewController.swift */; };
+		23C4DE691E8AEE9E00E46E45 /* AvailableQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE681E8AEE9E00E46E45 /* AvailableQuestionsViewController.swift */; };
+		23C4DE6B1E8AEEBE00E46E45 /* AvailableQuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4DE6A1E8AEEBE00E46E45 /* AvailableQuestionsTableViewCell.swift */; };
 		3AC84228E95A4CBF9C783C8C /* Pods_QuizlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */; };
 		5220F9CE1E89C72B008D9BA0 /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220F9CD1E89C72B008D9BA0 /* Questionnaire.swift */; };
 		5220F9D01E89D28E008D9BA0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220F9CF1E89D28E008D9BA0 /* Question.swift */; };
@@ -112,6 +114,8 @@
 		23C4DE5E1E8836AB00E46E45 /* EditQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuestionsViewController.swift; sourceTree = "<group>"; };
 		23C4DE601E8836C300E46E45 /* EditQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		23C4DE641E89312F00E46E45 /* EditQuestionTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditQuestionTextViewController.swift; sourceTree = "<group>"; };
+		23C4DE681E8AEE9E00E46E45 /* AvailableQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableQuestionsViewController.swift; sourceTree = "<group>"; };
+		23C4DE6A1E8AEEBE00E46E45 /* AvailableQuestionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableQuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quizly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5220F9CD1E89C72B008D9BA0 /* Questionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
 		5220F9CF1E89D28E008D9BA0 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 		237B850A1E7EBF6100C24875 /* Take */ = {
 			isa = PBXGroup;
 			children = (
+				237B85161E7EC8B100C24875 /* TitleViewController.swift */,
+				23C4DE671E8AEE7000E46E45 /* Questions */,
 				237B852D1E7F114100C24875 /* AvailableQuestionnairesViewController.swift */,
 				237B852F1E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift */,
 			);
@@ -229,7 +235,6 @@
 				237B851F1E7ECF1A00C24875 /* Question Type */,
 				237B851C1E7ECAD100C24875 /* AddQuestion */,
 				237B85191E7ECA8D00C24875 /* Type */,
-				237B85161E7EC8B100C24875 /* TitleViewController.swift */,
 			);
 			name = Create;
 			sourceTree = "<group>";
@@ -377,6 +382,15 @@
 				5220F9D11E89D2C0008D9BA0 /* Answers.swift */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		23C4DE671E8AEE7000E46E45 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				23C4DE681E8AEE9E00E46E45 /* AvailableQuestionsViewController.swift */,
+				23C4DE6A1E8AEEBE00E46E45 /* AvailableQuestionsTableViewCell.swift */,
+			);
+			name = Questions;
 			sourceTree = "<group>";
 		};
 		5168503F538050E9C55CA782 /* Frameworks */ = {
@@ -703,12 +717,14 @@
 				237B85171E7EC8B100C24875 /* TitleViewController.swift in Sources */,
 				5220F9D01E89D28E008D9BA0 /* Question.swift in Sources */,
 				237D18F81E857353001E416B /* CreateEssayViewController.swift in Sources */,
+				23C4DE691E8AEE9E00E46E45 /* AvailableQuestionsViewController.swift in Sources */,
 				237D18EF1E856C7C001E416B /* CreateTFTableViewCell.swift in Sources */,
 				23C4DE651E89312F00E46E45 /* EditQuestionTextViewController.swift in Sources */,
 				237B85151E7EC5CA00C24875 /* SelectTypeTableViewCell.swift in Sources */,
 				237D18FC1E85787B001E416B /* CreateMTViewController.swift in Sources */,
 				237D18F11E856C95001E416B /* CreateTFViewController.swift in Sources */,
 				237B85231E7ED02D00C24875 /* QuestionTypeViewController.swift in Sources */,
+				23C4DE6B1E8AEEBE00E46E45 /* AvailableQuestionsTableViewCell.swift in Sources */,
 				237B852C1E7F0E7000C24875 /* CreateQuestionnaireViewController.swift in Sources */,
 				237D18E71E856443001E416B /* QuestionnaireTextViewController.swift in Sources */,
 				237B850F1E7EC0D600C24875 /* MainViewController.swift in Sources */,
