@@ -56,6 +56,10 @@ class EditQuestionTextViewController: UIViewController {
         {
             performSegue(withIdentifier: "editQuestionTexttoCreateMC", sender: self)
         }
+        if qType == "MT"
+        {
+            performSegue(withIdentifier: "editQuestionTexttoCreateMT", sender: self)
+        }
         
         
     }
@@ -86,10 +90,24 @@ class EditQuestionTextViewController: UIViewController {
             dest.editingMode = true
             dest.options = questionInfo.value(forKey: "options")! as! [String]
         }
+        if segue.identifier == "editQuestionTexttoCreateMT" {
+            let dest = segue.destination as! CreateMTViewController
+            dest.questionnaireID = selectedCode
+            if (selectedType == "Quiz")
+            {
+                dest.leftOptions = questionInfo.value(forKey: "left options")! as! [String]
+                dest.rightOptions = questionInfo.value(forKey: "right options")! as! [String]
+            }
+            dest.questionID = selectedQuestionCode
+            dest.questionnaireType = selectedType
+            dest.questionText = questionTextTV.text
+            dest.editingMode = true
+        }
     }
     
     func saveText() {
         ref = FIRDatabase.database().reference()
         ref.child(selectedType).child(selectedCode).child("questions").child(selectedQuestionCode).child("text").setValue(self.questionTextTV.text)
     }
+    
 }

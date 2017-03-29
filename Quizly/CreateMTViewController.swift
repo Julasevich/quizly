@@ -20,7 +20,8 @@ class CreateMTViewController: UIViewController, UITableViewDelegate, UITableView
     var questionID = ""
     var questionnaireType = ""
     var questionnaireID = ""
-    
+    var editingMode = false
+    var start = true
     override func viewDidLoad() {
         super.viewDidLoad()
         //Right Buttons
@@ -55,8 +56,20 @@ class CreateMTViewController: UIViewController, UITableViewDelegate, UITableView
         if indexPath.row != leftOptions.count{
             //Question Cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "createMTCell", for: indexPath) as! CreateMTTableViewCell
-            leftOptions[indexPath.row] = cell.leftTF.text!
-            rightOptions[indexPath.row] = cell.rightTF.text!
+            if start == false{
+                print("Changing array")
+                leftOptions[indexPath.row] = cell.leftTF.text!
+                rightOptions[indexPath.row] = cell.rightTF.text!
+            } else
+            {
+                print("Changing ext field")
+                cell.leftTF.text = leftOptions[indexPath.row]
+                cell.rightTF.text = rightOptions[indexPath.row]
+            }
+            if indexPath.row == leftOptions.count-1
+            {
+                start = false
+            }
             return cell
         } else {
             //Add Question Cell
@@ -81,8 +94,9 @@ class CreateMTViewController: UIViewController, UITableViewDelegate, UITableView
     func addQuestion() {
         //Save Options
         ref = FIRDatabase.database().reference()
-        questionID = createID()
- 
+        if editingMode == false{
+            questionID = createID()
+        }
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("left options").setValue(leftOptions)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("right options").setValue(rightOptions)
