@@ -204,6 +204,8 @@
                         <segue destination="3PO-bb-JWQ" kind="show" identifier="editQuestionTexttoCreateMC" id="Nmw-cv-d31"/>
                         <segue destination="kyM-GF-g6k" kind="show" identifier="editQuestionTexttoCreateMT" id="apZ-uI-TWa"/>
                         <segue destination="NUt-C4-leC" kind="show" identifier="editQuestionTexttoCreateRA" id="jBs-Z8-qak"/>
+                        <segue destination="sYq-Gu-kfJ" kind="show" identifier="editQuestionTexttoCreateSA" id="bRm-wn-foI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="editQuestionTexttoHome" id="T09-aO-0Z2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HzQ-j4-X9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,7 +443,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createMCCell" id="pNi-wg-OKr" customClass="CreateMultipleChoiceTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pNi-wg-OKr" id="j81-tK-eUE">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -470,7 +472,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addAnswerCell" id="1ZC-h5-aNG">
-                                        <rect key="frame" x="0.0" y="100" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="99.5" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ZC-h5-aNG" id="zJO-pV-mxq">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -714,7 +716,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter maximum character limit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvz-db-F5o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvz-db-F5o">
                                 <rect key="frame" x="0.0" y="44" width="768" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -734,6 +736,7 @@
                     <connections>
                         <outlet property="charLimitTF" destination="Y9W-4g-LPi" id="UGd-7y-dkk"/>
                         <segue destination="Zxt-O6-ZNu" kind="show" identifier="addSAToAddQuestion" id="DSl-hU-QoM"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="addSAToHome" id="5bQ-1P-IOr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsZ-iz-4nQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -772,6 +775,7 @@
                     <connections>
                         <outlet property="charMinTF" destination="Dq4-ur-seM" id="hIZ-dl-86S"/>
                         <segue destination="Zxt-O6-ZNu" kind="show" identifier="addESToAddQuestion" id="h3v-Rf-h0n"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="editQuestionTexttoHome" id="L9g-b0-jWA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMa-B3-0Hw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -857,11 +861,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HA1-VF-Hvr"/>
-        <segue reference="Nmw-cv-d31"/>
+        <segue reference="T09-aO-0Z2"/>
         <segue reference="jBs-Z8-qak"/>
+        <segue reference="Nmw-cv-d31"/>
         <segue reference="g05-1s-hoZ"/>
         <segue reference="apZ-uI-TWa"/>
-        <segue reference="qdt-Tn-Efe"/>
+        <segue reference="bRm-wn-foI"/>
+        <segue reference="h3v-Rf-h0n"/>
     </inferredMetricsTieBreakers>
 </document>

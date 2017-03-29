@@ -64,6 +64,14 @@ class EditQuestionTextViewController: UIViewController {
         {
             performSegue(withIdentifier: "editQuestionTexttoCreateRA", sender: self)
         }
+        if qType == "SA"
+        {
+            performSegue(withIdentifier: "editQuestionTexttoCreateSA", sender: self)
+        }
+        if qType == "ES"
+        {
+            performSegue(withIdentifier: "editQuestionTexttoHome", sender: self)
+        }
         
         
     }
@@ -114,6 +122,18 @@ class EditQuestionTextViewController: UIViewController {
             {
                 dest.options = questionInfo.value(forKey: "options")! as! [String]
                 dest.ranks = questionInfo.value(forKey: "ranks")! as! [String]
+            }
+            dest.questionID = selectedQuestionCode
+            dest.questionnaireType = selectedType
+            dest.questionText = questionTextTV.text
+            dest.editingMode = true
+        }
+        if segue.identifier == "editQuestionTexttoCreateSA" {
+            let dest = segue.destination as! CreateSAViewController
+            dest.questionnaireID = selectedCode
+            if (selectedType == "Quiz")
+            {
+                dest.correctAns = questionInfo.value(forKey: "answer")! as! String
             }
             dest.questionID = selectedQuestionCode
             dest.questionnaireType = selectedType

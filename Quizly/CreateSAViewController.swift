@@ -19,7 +19,7 @@ class CreateSAViewController: UIViewController {
     var questionnaireType = ""
     var questionnaireID = ""
     var correctAns = ""
-    
+    var editingMode = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +27,9 @@ class CreateSAViewController: UIViewController {
         let addBtn:UIBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addQuestion))
         let saveBtn:UIBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveOptions))
         self.navigationItem.rightBarButtonItems = [addBtn, saveBtn]
+        if editingMode == true {
+            charLimitTF.text = correctAns
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,12 +41,20 @@ class CreateSAViewController: UIViewController {
     func addQuestion() {
         //Save Options
         ref = FIRDatabase.database().reference()
-        questionID = createID()
+        if editingMode == false
+        {
+            questionID = createID()
+        }
         
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
-        self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("Answer").setValue(correctAns)
+        self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("answer").setValue(correctAns)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("type").setValue("SA")
-        self.performSegue(withIdentifier: "addSAToAddQuestion", sender: self)
+        if editingMode == false
+        {
+            self.performSegue(withIdentifier: "addSAToAddQuestion", sender: self)
+        } else {
+            self.performSegue(withIdentifier: "addSAToHome", sender: self)
+        }
     }
     
     func saveOptions() {
