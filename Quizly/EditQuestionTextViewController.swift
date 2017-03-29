@@ -52,6 +52,10 @@ class EditQuestionTextViewController: UIViewController {
         {
             performSegue(withIdentifier: "editQuestionTexttoCreateTF", sender: self)
         }
+        if qType == "MC"
+        {
+            performSegue(withIdentifier: "editQuestionTexttoCreateMC", sender: self)
+        }
         
         
     }
@@ -68,6 +72,19 @@ class EditQuestionTextViewController: UIViewController {
             dest.questionnaireType = selectedType
             dest.questionText = questionTextTV.text
             dest.editingMode = true
+        }
+        if segue.identifier == "editQuestionTexttoCreateMC" {
+            let dest = segue.destination as! CreateMultipleChoiceViewController
+            dest.questionnaireID = selectedCode
+            if (selectedType == "Quiz")
+            {
+                dest.correctRow = questionInfo.value(forKey: "correct index")! as! Int
+            }
+            dest.questionID = selectedQuestionCode
+            dest.questionnaireType = selectedType
+            dest.questionText = questionTextTV.text
+            dest.editingMode = true
+            dest.options = questionInfo.value(forKey: "options")! as! [String]
         }
     }
     

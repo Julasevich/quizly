@@ -20,8 +20,9 @@ class CreateMultipleChoiceViewController: UIViewController, UITableViewDelegate,
     var questionnaireID = ""
     var questionID = ""
     var ref: FIRDatabaseReference!
+    var editingMode = false
     var correctRow = 0
-
+    var start = true
     override func viewDidLoad() {
         super.viewDidLoad()
         print(questionnaireType)
@@ -31,10 +32,12 @@ class CreateMultipleChoiceViewController: UIViewController, UITableViewDelegate,
         let addBtn:UIBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addQuestion))
         let saveBtn:UIBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveOptions))
         self.navigationItem.rightBarButtonItems = [addBtn, saveBtn]
-
+        
         //Delegate
         createMCTable.delegate = self
         createMCTable.dataSource = self
+        
+        print(options)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +62,16 @@ class CreateMultipleChoiceViewController: UIViewController, UITableViewDelegate,
         if indexPath.row != options.count{
             //Question Cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "createMCCell", for: indexPath) as! CreateMultipleChoiceTableViewCell
-            options[indexPath.row] = cell.optionTF.text!
+            if start == false {
+                options[indexPath.row] = cell.optionTF.text!
+            }else {
+                cell.optionTF.text = options[indexPath.row]
+                
+            }
+            if indexPath.row == options.count-1
+            {
+                start = false
+            }
             if questionnaireType == "Quiz" {
                 if correctRow == indexPath.row {
                     cell.correctLabel.backgroundColor = UIColor.green
@@ -92,14 +104,20 @@ class CreateMultipleChoiceViewController: UIViewController, UITableViewDelegate,
     func addQuestion() {
         //Save Options
         ref = FIRDatabase.database().reference()
-        questionID = createID()
+        if editingMode == false{
+            questionID = createID()
+        }
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("options").setValue(options)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("type").setValue("MC")
         if questionnaireType == "Quiz" {
             self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("correct index").setValue(correctRow)
         }
-        self.performSegue(withIdentifier: "addMCToAddQuestion", sender: self)
+        if editingMode == false{
+            self.performSegue(withIdentifier: "addMCToAddQuestion", sender: self)
+        }else {
+            self.performSegue(withIdentifier: "addMCToHome", sender: self)
+        }
     }
     
     func saveOptions() {

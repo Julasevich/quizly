@@ -108,7 +108,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createQuestionnaireCell" id="Jmi-Ik-MDN" customClass="CreateQuestionnaireTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jmi-Ik-MDN" id="smI-56-l2k">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -148,7 +148,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="editQuestionCell" id="Zxu-qJ-nxf" customClass="EditQuestionsTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zxu-qJ-nxf" id="MwX-Kf-KxX">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -201,6 +201,7 @@
                     <connections>
                         <outlet property="questionTextTV" destination="QWm-xF-Msl" id="ex4-FW-JTn"/>
                         <segue destination="aNH-bQ-al9" kind="show" identifier="editQuestionTexttoCreateTF" id="g05-1s-hoZ"/>
+                        <segue destination="3PO-bb-JWQ" kind="show" identifier="editQuestionTexttoCreateMC" id="Nmw-cv-d31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HzQ-j4-X9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,7 +226,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="selectTypeCell" id="gEC-ZJ-XjK" customClass="SelectTypeTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gEC-ZJ-XjK" id="KJL-4b-fCR">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -316,7 +317,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addQuestionCell" id="JAk-fG-DlL" customClass="AddQuestionTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JAk-fG-DlL" id="4Dh-Wh-sK3">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -356,7 +357,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionTypeCell" id="IvF-Dd-t8O" customClass="QuestionTypeTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IvF-Dd-t8O" id="ASr-e0-d5q">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -438,7 +439,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createMCCell" id="pNi-wg-OKr" customClass="CreateMultipleChoiceTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pNi-wg-OKr" id="j81-tK-eUE">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -467,7 +468,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addAnswerCell" id="1ZC-h5-aNG">
-                                        <rect key="frame" x="0.0" y="99.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ZC-h5-aNG" id="zJO-pV-mxq">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -482,6 +483,7 @@
                     <connections>
                         <outlet property="createMCTable" destination="4WL-ip-qeC" id="2rL-6R-Rg0"/>
                         <segue destination="Zxt-O6-ZNu" kind="show" identifier="addMCToAddQuestion" id="qdt-Tn-Efe"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="addMCToHome" id="HA1-VF-Hvr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mr-Tp-xjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -506,7 +508,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createTFCell" id="sjC-dd-5TP" customClass="CreateTFTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sjC-dd-5TP" id="OnU-Sq-EPH">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -567,7 +569,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createMTCell" id="CyP-aZ-mxN" customClass="CreateMTTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyP-aZ-mxN" id="DI4-BU-Ra4">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -602,7 +604,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addAnswerCell" id="OmT-Fm-1go">
-                                        <rect key="frame" x="0.0" y="99.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OmT-Fm-1go" id="3x6-df-PUQ">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -641,7 +643,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createRACell" id="lDN-Ma-lG3" customClass="CreateRATableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lDN-Ma-lG3" id="Pwj-uR-MJz">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -677,7 +679,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addAnswerCell" id="jCS-eC-cjF">
-                                        <rect key="frame" x="0.0" y="99.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jCS-eC-cjF" id="OmU-Qa-f1C">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -792,7 +794,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="availableQuestionnaires" id="CzS-Ma-W9r" customClass="AvailableQuestionnairesTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CzS-Ma-W9r" id="W5q-Ib-bTh">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -831,7 +833,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="availableQuestionsCell" id="aQC-N0-vPN" customClass="AvailableQuestionsTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aQC-N0-vPN" id="dlJ-TT-teY">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -853,8 +855,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iCI-7G-ryE"/>
+        <segue reference="HA1-VF-Hvr"/>
+        <segue reference="Nmw-cv-d31"/>
         <segue reference="g05-1s-hoZ"/>
-        <segue reference="Esm-BA-TN8"/>
+        <segue reference="qdt-Tn-Efe"/>
     </inferredMetricsTieBreakers>
 </document>
