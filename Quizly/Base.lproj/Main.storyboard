@@ -163,6 +163,7 @@
                     <connections>
                         <outlet property="editQuestionnaireTable" destination="3cr-5E-jJx" id="uTS-fm-wDq"/>
                         <segue destination="SYW-6d-78m" kind="show" identifier="editToEditText" id="Fz7-Mw-4MD"/>
+                        <segue destination="zKG-0k-ObR" kind="show" identifier="AddNewQuestionfromEdit" id="e31-Zj-gl9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l82-38-wDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,7 +444,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createMCCell" id="pNi-wg-OKr" customClass="CreateMultipleChoiceTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pNi-wg-OKr" id="j81-tK-eUE">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -472,7 +473,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addAnswerCell" id="1ZC-h5-aNG">
-                                        <rect key="frame" x="0.0" y="99.5" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ZC-h5-aNG" id="zJO-pV-mxq">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -861,12 +862,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T09-aO-0Z2"/>
-        <segue reference="jBs-Z8-qak"/>
+        <segue reference="bI5-G5-Knq"/>
+        <segue reference="qdt-Tn-Efe"/>
         <segue reference="Nmw-cv-d31"/>
+        <segue reference="e31-Zj-gl9"/>
+        <segue reference="jBs-Z8-qak"/>
         <segue reference="g05-1s-hoZ"/>
         <segue reference="apZ-uI-TWa"/>
         <segue reference="bRm-wn-foI"/>
-        <segue reference="h3v-Rf-h0n"/>
     </inferredMetricsTieBreakers>
 </document>

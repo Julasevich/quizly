@@ -40,22 +40,37 @@ class EditQuestionsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Edit Quiz"
+        return "Edit"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questionDictionary.count
+        return questionDictionary.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "editQuestionCell", for: indexPath) as! EditQuestionsTableViewCell
+        print("a: \(indexPath.row) b: \(questionDictionary.count-1 )")
+        if indexPath.row != questionDictionary.count-1{
+            //Question Cell
+            cell.textLabel?.text = "Question \(indexPath.row + 1)"
+        }
+        
+        if indexPath.row == editQuestionnaireTable.numberOfRows(inSection: 0)-1
+        {
+            cell.textLabel?.text = "Add Question"
+        }
         cell.textLabel?.text = "Question \(indexPath.row + 1)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedQuestionCode = questionCodes[indexPath.row]
-        self.performSegue(withIdentifier: "editToEditText", sender: self)
+        if indexPath.row != questionDictionary.count
+        {
+            selectedQuestionCode = questionCodes[indexPath.row]
+            self.performSegue(withIdentifier: "editToEditText", sender: self)
+        } else {
+            self.performSegue(withIdentifier: "AddNewQuestionfromEdit", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -65,6 +80,13 @@ class EditQuestionsViewController: UIViewController, UITableViewDataSource, UITa
             destination.selectedType = selectedType
             destination.selectedQuestionCode = selectedQuestionCode
         }
+        if segue.identifier == "AddNewQuestionfromEdit" {
+            let destination = segue.destination as! QuestionTypeViewController
+            destination.questionnaireType = selectedType
+            destination.questionCount = questionDictionary.count
+            destination.questionnaireID = selectedCode
+        }
+
     }
     
     func getData() {
