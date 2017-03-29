@@ -50,16 +50,13 @@ class EditQuestionsViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "editQuestionCell", for: indexPath) as! EditQuestionsTableViewCell
         print("a: \(indexPath.row) b: \(questionDictionary.count-1 )")
-        if indexPath.row != questionDictionary.count-1{
+        if indexPath.row != questionDictionary.count{
             //Question Cell
             cell.textLabel?.text = "Question \(indexPath.row + 1)"
-        }
-        
-        if indexPath.row == editQuestionnaireTable.numberOfRows(inSection: 0)-1
-        {
+        } else {
+            //Add Question Cell
             cell.textLabel?.text = "Add Question"
         }
-        cell.textLabel?.text = "Question \(indexPath.row + 1)"
         return cell
     }
     
