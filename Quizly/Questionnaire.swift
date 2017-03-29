@@ -11,7 +11,7 @@ class Questionnaire
 {
     var id : Int = -1
     var tag : String = " "
-    var questionList = Array<Any>()
+    var questionList = [Any]()
     func addQuestion(question : Question) {
         questionList.append(question)
     }

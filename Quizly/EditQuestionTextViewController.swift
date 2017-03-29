@@ -18,7 +18,7 @@ class EditQuestionTextViewController: UIViewController {
     var selectedCode = ""
     var selectedQuestionCode = ""
     var selectedType = ""
-    
+    var questionInfo = NSDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
@@ -41,10 +41,34 @@ class EditQuestionTextViewController: UIViewController {
             self.questionText = snapshot.value as! String
             self.questionTextTV.text = self.questionText
         })
+        ref.child(selectedType).child(selectedCode).child("questions").child(selectedQuestionCode).observeSingleEvent(of: .value, with: { (snapshot) in
+            self.questionInfo = snapshot.value! as! NSDictionary
+        })
     }
     
     func nextSection() {
+        let qType = questionInfo.value(forKey: "type")! as! String
+        if qType == "TF"
+        {
+            performSegue(withIdentifier: "editQuestionTexttoCreateTF", sender: self)
+        }
         
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editQuestionTexttoCreateTF" {
+            let dest = segue.destination as! CreateTFViewController
+            dest.questionnaireID = selectedCode
+            if (selectedType == "Quiz")
+            {
+                dest.correctRow = questionInfo.value(forKey: "correct index")! as! Int
+            }
+            dest.questionID = selectedQuestionCode
+            dest.questionnaireType = selectedType
+            dest.questionText = questionTextTV.text
+            dest.editingMode = true
+        }
     }
     
     func saveText() {

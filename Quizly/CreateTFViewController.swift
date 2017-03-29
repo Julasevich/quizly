@@ -17,9 +17,10 @@ class CreateTFViewController: UIViewController, UITableViewDelegate, UITableView
     var ref: FIRDatabaseReference!
     var questionID = ""
     var questionnaireType = ""
-    var questionnaireID = ""
+    var questionnaireID = " "
     var correctRow = 0
-    
+    var editingMode = false
+    var dictFromFirebase = NSDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +32,12 @@ class CreateTFViewController: UIViewController, UITableViewDelegate, UITableView
         //Delegate
         createTFTable.delegate = self
         createTFTable.dataSource = self
+        
+        
+       if editingMode == true
+       {
+        
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,14 +85,23 @@ class CreateTFViewController: UIViewController, UITableViewDelegate, UITableView
     func addQuestion() {
         //Save Options
         ref = FIRDatabase.database().reference()
-        questionID = createID()
+        print(editingMode)
+        if editingMode == false
+        {
+            questionID = createID()
+        }
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("options").setValue(["True", "False"])
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("type").setValue("TF")
         if questionnaireType == "Quiz" {
             self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("correct index").setValue(correctRow)
         }
-        self.performSegue(withIdentifier: "addTFToAddQuestion", sender: self)
+        if editingMode == false{
+            self.performSegue(withIdentifier: "addTFToAddQuestion", sender: self)
+        }else
+        {
+            self.performSegue(withIdentifier: "createTFtoHome", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

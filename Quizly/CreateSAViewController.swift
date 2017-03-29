@@ -18,7 +18,7 @@ class CreateSAViewController: UIViewController {
     var questionID = ""
     var questionnaireType = ""
     var questionnaireID = ""
-    var charLimit = ""
+    var correctAns = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +41,13 @@ class CreateSAViewController: UIViewController {
         questionID = createID()
         
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
-        self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("Character Limit").setValue(charLimit)
+        self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("Answer").setValue(correctAns)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("type").setValue("SA")
         self.performSegue(withIdentifier: "addSAToAddQuestion", sender: self)
     }
     
     func saveOptions() {
-        charLimit = charLimitTF.text!
+        correctAns = charLimitTF.text!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
