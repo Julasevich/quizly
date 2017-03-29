@@ -60,6 +60,10 @@ class EditQuestionTextViewController: UIViewController {
         {
             performSegue(withIdentifier: "editQuestionTexttoCreateMT", sender: self)
         }
+        if qType == "RA"
+        {
+            performSegue(withIdentifier: "editQuestionTexttoCreateRA", sender: self)
+        }
         
         
     }
@@ -97,6 +101,19 @@ class EditQuestionTextViewController: UIViewController {
             {
                 dest.leftOptions = questionInfo.value(forKey: "left options")! as! [String]
                 dest.rightOptions = questionInfo.value(forKey: "right options")! as! [String]
+            }
+            dest.questionID = selectedQuestionCode
+            dest.questionnaireType = selectedType
+            dest.questionText = questionTextTV.text
+            dest.editingMode = true
+        }
+        if segue.identifier == "editQuestionTexttoCreateRA" {
+            let dest = segue.destination as! CreateRAViewController
+            dest.questionnaireID = selectedCode
+            if (selectedType == "Quiz")
+            {
+                dest.options = questionInfo.value(forKey: "options")! as! [String]
+                dest.ranks = questionInfo.value(forKey: "ranks")! as! [String]
             }
             dest.questionID = selectedQuestionCode
             dest.questionnaireType = selectedType

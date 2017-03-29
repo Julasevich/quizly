@@ -20,7 +20,8 @@ class CreateRAViewController: UIViewController, UITableViewDelegate, UITableView
     var questionID = ""
     var questionnaireType = ""
     var questionnaireID = ""
-    
+    var editingMode = false
+    var start = true
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +33,7 @@ class CreateRAViewController: UIViewController, UITableViewDelegate, UITableView
         //Delegate
         createRATable.delegate = self
         createRATable.dataSource = self
+        print(ranks)
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,8 +58,20 @@ class CreateRAViewController: UIViewController, UITableViewDelegate, UITableView
         if indexPath.row != options.count{
             //Question Cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "createRACell", for: indexPath) as! CreateRATableViewCell
-            options[indexPath.row] = cell.optionTF.text!
-            ranks[indexPath.row] = cell.rankTF.text!
+            if start == false
+            {
+                options[indexPath.row] = cell.optionTF.text!
+                ranks[indexPath.row] = cell.rankTF.text!
+            } else {
+                cell.optionTF.text = options[indexPath.row]
+                cell.rankTF.text = ranks[indexPath.row]
+            }
+            
+            if indexPath.row == options.count-1
+            {
+                start = false
+            }
+            
             if questionnaireType == "Survey" {
                 cell.rankTF.isHidden = true
                 cell.rankLabel.isHidden = true
@@ -85,7 +99,9 @@ class CreateRAViewController: UIViewController, UITableViewDelegate, UITableView
     func addQuestion() {
         //Save Options
         ref = FIRDatabase.database().reference()
-        questionID = createID()
+        if editingMode == false{
+            questionID = createID()
+        }
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("options").setValue(options)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("type").setValue("RA")

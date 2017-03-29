@@ -57,12 +57,10 @@ class CreateMTViewController: UIViewController, UITableViewDelegate, UITableView
             //Question Cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "createMTCell", for: indexPath) as! CreateMTTableViewCell
             if start == false{
-                print("Changing array")
                 leftOptions[indexPath.row] = cell.leftTF.text!
                 rightOptions[indexPath.row] = cell.rightTF.text!
             } else
             {
-                print("Changing ext field")
                 cell.leftTF.text = leftOptions[indexPath.row]
                 cell.rightTF.text = rightOptions[indexPath.row]
             }
