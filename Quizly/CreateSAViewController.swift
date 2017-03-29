@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class CreateSAViewController: UIViewController {
     
+    @IBOutlet weak var shortAnswerLabel: UILabel!
     @IBOutlet weak var charLimitTF: UITextField!
     var questionText = ""
     var ref: FIRDatabaseReference!
@@ -22,7 +23,11 @@ class CreateSAViewController: UIViewController {
     var editingMode = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if questionnaireType == "Quiz" {
+            shortAnswerLabel.text = "Enter Answer"
+        } else {
+            shortAnswerLabel.text = "Enter Max Char Limit"
+        }
         //Right Buttons
         let addBtn:UIBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addQuestion))
         let saveBtn:UIBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveOptions))
@@ -47,6 +52,12 @@ class CreateSAViewController: UIViewController {
         }
         
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
+        /*
+        if questionnaireType == "Quiz" {
+            self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("answer").setValue(correctAns)
+        } else {
+            self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("maxChar").setValue(correctAns)
+        }*/
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("answer").setValue(correctAns)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("type").setValue("SA")
         if editingMode == false
