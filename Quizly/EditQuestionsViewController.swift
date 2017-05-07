@@ -52,7 +52,7 @@ class EditQuestionsViewController: UIViewController, UITableViewDataSource, UITa
         print("a: \(indexPath.row) b: \(questionDictionary.count-1 )")
         if indexPath.row != questionDictionary.count{
             //Question Cell
-            cell.textLabel?.text = "Question \(indexPath.row + 1)"
+            cell.textLabel?.text = "Question \(indexPath.row + 1): \(questionDictionary[questionCodes[indexPath.row]]?["text"] as! String)"
         } else {
             //Add Question Cell
             cell.textLabel?.text = "Add Question"

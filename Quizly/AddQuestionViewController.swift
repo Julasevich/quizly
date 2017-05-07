@@ -18,6 +18,7 @@ class AddQuestionViewController: UIViewController, UITableViewDelegate, UITableV
     var questionnaireType = ""
     var questionnaireID = ""
     var ref: FIRDatabaseReference!
+    var questionCodes = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,8 @@ class AddQuestionViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "addQuestionCell", for: indexPath) as! AddQuestionTableViewCell
         if indexPath.row != questionDictionary.count{
             //Question Cell
-            cell.textLabel?.text = "Question \(indexPath.row + 1)"
+            cell.textLabel?.text = "Question \(indexPath.row + 1): \(questionDictionary[questionCodes[indexPath.row]]?["text"] as! String)"
+            
         } else {
             //Add Question Cell
             cell.textLabel?.text = "Add Question"
@@ -83,6 +85,9 @@ class AddQuestionViewController: UIViewController, UITableViewDelegate, UITableV
             if let questionDict = snapshot.value as? [String:AnyObject] {
                 self.questionDictionary = questionDict
                 self.addQuestionTable.reloadData()
+                for question in questionDict {
+                    self.questionCodes.append(question.key)
+                }
             }
         })
     }

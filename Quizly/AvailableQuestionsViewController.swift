@@ -15,6 +15,7 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
     var selectedCode = ""
     var selectedType = ""
     var selectedQuestionCode = ""
+    var selectedQuestionType = ""
     var questionDictionary = [String:AnyObject]()
     var questionCodes = [String]()
     var ref: FIRDatabaseReference!
@@ -49,33 +50,33 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "availableQuestionsCell", for: indexPath) as! AvailableQuestionsTableViewCell
-        cell.textLabel?.text = "Question \(indexPath.row + 1)"
+        cell.textLabel?.text = "Question \(indexPath.row + 1): \(questionDictionary[questionCodes[indexPath.row]]?["text"] as! String)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedQuestionCode = questionCodes[indexPath.row]
-        selectedType = questionDictionary[selectedQuestionCode]?["type"]! as! String
+        selectedQuestionType = questionDictionary[selectedQuestionCode]?["type"]! as! String
         //Conditions here based on question type
-        if selectedType == "MC" {
+        if selectedQuestionType == "MC" {
             self.performSegue(withIdentifier: "availableToMC", sender: self)
             
-        } else if selectedType == "TF" {
+        } else if selectedQuestionType == "TF" {
             self.performSegue(withIdentifier: "availableToTF", sender: self)
             
-        } else if selectedType == "MT" {
+        } else if selectedQuestionType == "MT" {
             self.performSegue(withIdentifier: "availableToMA", sender: self)
             
-        } else if selectedType == "RA" {
+        } else if selectedQuestionType == "RA" {
             self.performSegue(withIdentifier: "availableToRA", sender: self)
             
-        } else if selectedType == "MA" {
+        } else if selectedQuestionType == "MA" {
             self.performSegue(withIdentifier: "availableToMA", sender: self)
             
-        } else if selectedType == "SA" {
+        } else if selectedQuestionType == "SA" {
             self.performSegue(withIdentifier: "availableToSA", sender: self)
             
-        } else if selectedType == "ES" {
+        } else if selectedQuestionType == "ES" {
             self.performSegue(withIdentifier: "availableToES", sender: self)
             
         }
@@ -83,11 +84,12 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
-            let destination = segue.destination as! EditQuestionTextViewController
+        if segue.identifier == "availableToMC" {
+            let destination = segue.destination as! AnswerMCViewController
             destination.selectedCode = selectedCode
-            destination.selectedType = selectedType
             destination.selectedQuestionCode = selectedQuestionCode
+            destination.selectedType = selectedType
+            destination.selectedQuestionType = selectedQuestionType
         }
     }
     
