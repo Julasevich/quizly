@@ -55,7 +55,30 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedQuestionCode = questionCodes[indexPath.row]
+        selectedType = questionDictionary[selectedQuestionCode]?["type"]! as! String
         //Conditions here based on question type
+        if selectedType == "MC" {
+            self.performSegue(withIdentifier: "availableToMC", sender: self)
+            
+        } else if selectedType == "TF" {
+            self.performSegue(withIdentifier: "availableToTF", sender: self)
+            
+        } else if selectedType == "MT" {
+            self.performSegue(withIdentifier: "availableToMA", sender: self)
+            
+        } else if selectedType == "RA" {
+            self.performSegue(withIdentifier: "availableToRA", sender: self)
+            
+        } else if selectedType == "MA" {
+            self.performSegue(withIdentifier: "availableToMA", sender: self)
+            
+        } else if selectedType == "SA" {
+            self.performSegue(withIdentifier: "availableToSA", sender: self)
+            
+        } else if selectedType == "ES" {
+            self.performSegue(withIdentifier: "availableToES", sender: self)
+            
+        }
         //self.performSegue(withIdentifier: "", sender: self)
     }
     
