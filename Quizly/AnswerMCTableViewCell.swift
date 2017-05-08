@@ -10,6 +10,8 @@ import UIKit
 
 class AnswerMCTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var correctLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

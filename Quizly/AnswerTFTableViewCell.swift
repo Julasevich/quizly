@@ -10,6 +10,8 @@ import UIKit
 
 class AnswerTFTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var chosen: UILabel!
+    @IBOutlet weak var theTextLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

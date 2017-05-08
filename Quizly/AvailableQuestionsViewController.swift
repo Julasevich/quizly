@@ -90,6 +90,13 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
             destination.selectedQuestionCode = selectedQuestionCode
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
+        } else if segue.identifier == "availableToMC" {
+            let destination = segue.destination as! AnswerTFViewController
+            destination.selectedCode = selectedCode
+            destination.selectedQuestionCode = selectedQuestionCode
+            destination.selectedType = selectedType
+            destination.selectedQuestionType = selectedQuestionType
+
         }
     }
     
