@@ -16,6 +16,7 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
     var selectedType = ""
     var selectedQuestionCode = ""
     var selectedQuestionType = ""
+    var resultCode = ""
     var questionDictionary = [String:AnyObject]()
     var questionCodes = [String]()
     var ref: FIRDatabaseReference!
@@ -25,7 +26,7 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        
+        print(resultCode)
         //Delegate
         availableQuestionsTable.delegate = self
         availableQuestionsTable.dataSource = self
@@ -90,6 +91,7 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
             destination.selectedQuestionCode = selectedQuestionCode
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
+            destination.resultCode = resultCode
         } else if segue.identifier == "availableToTF" {
             let destination = segue.destination as! AnswerTFViewController
             destination.selectedCode = selectedCode
@@ -135,5 +137,7 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
             }
         })
     }
+    
+    
 
 }

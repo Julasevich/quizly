@@ -19,11 +19,13 @@ class AvailableQuestionnairesViewController: UIViewController, UITableViewDelega
     var selectedCode = ""
     var surveyCodes = [String]()
     var quizCodes = [String]()
+    var resultCode = ""
     var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
+        resultCode = createID()
         //Delegate
         availableQuestionnairesTable.delegate = self
         availableQuestionnairesTable.dataSource = self
@@ -115,6 +117,7 @@ class AvailableQuestionnairesViewController: UIViewController, UITableViewDelega
             let destination = segue.destination as! AvailableQuestionsViewController
             destination.selectedCode = selectedCode
             destination.selectedType = selectedType
+            destination.resultCode = resultCode
         }
     }
     
@@ -132,6 +135,17 @@ class AvailableQuestionnairesViewController: UIViewController, UITableViewDelega
                 self.availableQuestionnairesTable.reloadData()
             }
         })
+    }
+    
+    func createID() -> String {
+        var i = 0
+        var id = ""
+        while i < 10 {
+            let randomNum:UInt32 = arc4random_uniform(9)
+            id += String(randomNum)
+            i += 1
+        }
+        return id
     }
 
 }
