@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class AnswerRAViewController: UIViewController {
 
+    @IBOutlet weak var questionTextView: UITextView!
+    var selectedQuestionCode = ""
+    var selectedCode = ""
+    var selectedType = ""
+    var selectedQuestionType = ""
+    var questionDictionary = [String:AnyObject]()
+    var questionText = ""
+    var ref: FIRDatabaseReference!
+    var selectedRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getData()
 
         // Do any additional setup after loading the view.
     }
@@ -31,5 +44,20 @@ class AnswerRAViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func getData() {
+        print(FIRDatabase.database().reference())
+        
+        ref = FIRDatabase.database().reference()
+        ref.child(selectedType).child(selectedCode).child("questions").child(selectedQuestionCode).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let questionDict = snapshot.value as? [String:AnyObject] {
+                self.questionDictionary = questionDict
+                self.questionTextView.text  = self.questionDictionary["text"] as! String
+                for question in questionDict {
+                    //self.questionCodes.append(question.key)
+                }
+            }
+        })
+    }
 
 }
