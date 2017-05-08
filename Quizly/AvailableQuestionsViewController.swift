@@ -98,30 +98,35 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
             destination.selectedQuestionCode = selectedQuestionCode
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
+            destination.resultCode = resultCode
         } else if segue.identifier == "availableToES" {
             let destination = segue.destination as! AnswerESViewController
             destination.selectedCode = selectedCode
             destination.selectedQuestionCode = selectedQuestionCode
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
+            destination.resultCode = resultCode
         } else if segue.identifier == "availableToSA" {
             let destination = segue.destination as! AnswerSAViewController
             destination.selectedCode = selectedCode
             destination.selectedQuestionCode = selectedQuestionCode
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
+            destination.resultCode = resultCode
         } else if segue.identifier == "availableToMA" {
             let destination = segue.destination as! AnswerMAViewController
             destination.selectedCode = selectedCode
             destination.selectedQuestionCode = selectedQuestionCode
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
+            destination.resultCode = resultCode
         } else if segue.identifier == "availableToRA" {
             let destination = segue.destination as! AnswerRAViewController
             destination.selectedCode = selectedCode
             destination.selectedQuestionCode = selectedQuestionCode
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
+            destination.resultCode = resultCode
         }
     }
     

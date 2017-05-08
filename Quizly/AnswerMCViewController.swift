@@ -102,7 +102,7 @@ class AnswerMCViewController: UIViewController,UITableViewDelegate, UITableViewD
     
     func answerQuestion() {
         ref = FIRDatabase.database().reference()
-        self.ref.child("Results").child(resultCode).child(selectedQuestionCode).child("answer").setValue(selectedRow)
+        self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("answer").setValue(selectedRow)
         self.navigationController?.popViewController(animated: true)
     }
 

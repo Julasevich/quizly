@@ -19,6 +19,7 @@ class AnswerTFViewController: UIViewController,UITableViewDelegate, UITableViewD
     var questionText = ""
     var ref: FIRDatabaseReference!
     var selectedRow = 1
+    var resultCode = ""
     var questionDictionary = [String:AnyObject]()
     @IBOutlet var optionsTable: UITableView!
     @IBOutlet weak var questionTextView: UITextView!
@@ -27,6 +28,9 @@ class AnswerTFViewController: UIViewController,UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         optionsTable.delegate = self
         optionsTable.dataSource = self
+        let saveBtn:UIBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveOption))
+        let answerBtn:UIBarButtonItem = UIBarButtonItem(title: "Answer", style: .plain, target: self, action: #selector(answerQuestion))
+        self.navigationItem.rightBarButtonItems = [answerBtn, saveBtn]
         print("GET DATA")
         getData()
         // Do any additional setup after loading the view.
@@ -94,14 +98,16 @@ class AnswerTFViewController: UIViewController,UITableViewDelegate, UITableViewD
         })
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func saveOption() {
+        optionsTable.reloadData()
+        
     }
-    */
+    
+    func answerQuestion() {
+        ref = FIRDatabase.database().reference()
+        self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("answer").setValue(selectedRow)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
 }
