@@ -71,7 +71,6 @@ class CreateRAViewController: UIViewController, UITableViewDelegate, UITableView
             }
             
             if questionnaireType == "Survey" {
-                cell.rankLabel.isHidden = true
             }
             return cell
         } else {
