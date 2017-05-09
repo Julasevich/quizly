@@ -25,6 +25,8 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let submitBtn:UIBarButtonItem = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(submit))
+        self.navigationItem.rightBarButtonItems = [submitBtn]
         getData()
         print(resultCode)
         //Delegate
@@ -127,6 +129,13 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
             destination.resultCode = resultCode
+        } else if segue.identifier == "availableToQuizResult" {
+            let destination = segue.destination as! QuizResultiewController
+            destination.selectedCode = selectedCode
+            destination.selectedQuestionCode = selectedQuestionCode
+            destination.selectedType = selectedType
+            destination.selectedQuestionType = selectedQuestionType
+            destination.resultCode = resultCode
         }
     }
     
@@ -141,6 +150,15 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
                 }
             }
         })
+    }
+    
+    func submit() {
+        if selectedType == "Quiz" {
+            self.performSegue(withIdentifier: "availableToQuizResult", sender: self)
+        } else {
+            
+        }
+    
     }
     
     

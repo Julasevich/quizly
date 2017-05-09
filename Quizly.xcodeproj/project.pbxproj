@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2338E6C61EBF738F002E8E1E /* AnswerSAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6C51EBF738F002E8E1E /* AnswerSAViewController.swift */; };
 		2338E6C81EBF73BB002E8E1E /* AnswerESViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6C71EBF73BB002E8E1E /* AnswerESViewController.swift */; };
+		2338E6CA1EC20903002E8E1E /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6C91EC20903002E8E1E /* QuizResultViewController.swift */; };
 		237B84DA1E7EBDB900C24875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B84D91E7EBDB900C24875 /* AppDelegate.swift */; };
 		237B84DC1E7EBDB900C24875 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B84DB1E7EBDB900C24875 /* ViewController.swift */; };
 		237B84DF1E7EBDB900C24875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237B84DD1E7EBDB900C24875 /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		1F4750F4963AEA64987319A8 /* Pods-Quizly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quizly/Pods-Quizly.release.xcconfig"; sourceTree = "<group>"; };
 		2338E6C51EBF738F002E8E1E /* AnswerSAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSAViewController.swift; sourceTree = "<group>"; };
 		2338E6C71EBF73BB002E8E1E /* AnswerESViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerESViewController.swift; sourceTree = "<group>"; };
+		2338E6C91EC20903002E8E1E /* QuizResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 		237B84D61E7EBDB900C24875 /* Quizly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237B84D91E7EBDB900C24875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		237B84DB1E7EBDB900C24875 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				23C4DE671E8AEE7000E46E45 /* Questions */,
 				237B852D1E7F114100C24875 /* AvailableQuestionnairesViewController.swift */,
 				237B852F1E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift */,
+				2338E6C91EC20903002E8E1E /* QuizResultViewController.swift */,
 			);
 			name = Take;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 				237B85151E7EC5CA00C24875 /* SelectTypeTableViewCell.swift in Sources */,
 				237D18FC1E85787B001E416B /* CreateMTViewController.swift in Sources */,
 				237D18F11E856C95001E416B /* CreateTFViewController.swift in Sources */,
+				2338E6CA1EC20903002E8E1E /* QuizResultViewController.swift in Sources */,
 				23AFA81A1EBF69DD0054A33D /* AnswerRAViewController.swift in Sources */,
 				237B85231E7ED02D00C24875 /* QuestionTypeViewController.swift in Sources */,
 				23C4DE6B1E8AEEBE00E46E45 /* AvailableQuestionsTableViewCell.swift in Sources */,
