@@ -121,7 +121,7 @@ class EditQuestionTextViewController: UIViewController {
             if (selectedType == "Quiz")
             {
                 dest.options = questionInfo.value(forKey: "options")! as! [String]
-                dest.ranks = questionInfo.value(forKey: "ranks")! as! [String]
+                
             }
             dest.questionID = selectedQuestionCode
             dest.questionnaireType = selectedType

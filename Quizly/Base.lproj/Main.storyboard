@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BWK-LD-Yfa">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BWK-LD-Yfa">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -148,7 +148,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="editQuestionCell" id="Zxu-qJ-nxf" customClass="EditQuestionsTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="55" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zxu-qJ-nxf" id="MwX-Kf-KxX">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -513,7 +513,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createTFCell" id="sjC-dd-5TP" customClass="CreateTFTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="55" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sjC-dd-5TP" id="OnU-Sq-EPH">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -574,10 +574,10 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createMTCell" id="CyP-aZ-mxN" customClass="CreateMTTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="55" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyP-aZ-mxN" id="DI4-BU-Ra4">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="adw-ht-NWo">
@@ -609,10 +609,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addAnswerCell" id="OmT-Fm-1go">
-                                        <rect key="frame" x="0.0" y="100" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OmT-Fm-1go" id="3x6-df-PUQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -648,28 +648,14 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createRACell" id="lDN-Ma-lG3" customClass="CreateRATableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="55" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lDN-Ma-lG3" id="Pwj-uR-MJz">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-K7-he6">
-                                                    <rect key="frame" x="8" y="6" width="467" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoR-JG-iEM">
-                                                    <rect key="frame" x="535" y="11" width="68" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hs5-VD-qDw">
-                                                    <rect key="frame" x="654" y="6" width="97" height="30"/>
+                                                    <rect key="frame" x="8" y="6" width="752" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -679,15 +665,13 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="optionTF" destination="7IN-K7-he6" id="M6b-5L-NOn"/>
-                                            <outlet property="rankLabel" destination="qoR-JG-iEM" id="Cox-15-Rvg"/>
-                                            <outlet property="rankTF" destination="Hs5-VD-qDw" id="3dw-aL-Lme"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addAnswerCell" id="jCS-eC-cjF">
-                                        <rect key="frame" x="0.0" y="100" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jCS-eC-cjF" id="OmU-Qa-f1C">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1001,15 +985,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3VX-B5-UtL">
-                                <rect key="frame" x="391" y="162" width="377" height="862"/>
+                                <rect key="frame" x="381" y="162" width="387" height="862"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xSX-b7-3DI" customClass="AnswerMATableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="377" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="387" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xSX-b7-3DI" id="SUY-D0-qdP">
-                                            <rect key="frame" x="0.0" y="0.0" width="377" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="387" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1253,13 +1237,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="trb-19-Keg"/>
-        <segue reference="e31-Zj-gl9"/>
+        <segue reference="bRm-wn-foI"/>
         <segue reference="0r7-JS-kbp"/>
-        <segue reference="9QC-G1-Niw"/>
+        <segue reference="e31-Zj-gl9"/>
+        <segue reference="trb-19-Keg"/>
         <segue reference="jBs-Z8-qak"/>
         <segue reference="Nmw-cv-d31"/>
-        <segue reference="bRm-wn-foI"/>
         <segue reference="g05-1s-hoZ"/>
+        <segue reference="aE6-mK-UOT"/>
     </inferredMetricsTieBreakers>
 </document>

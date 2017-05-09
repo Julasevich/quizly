@@ -10,6 +10,14 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
+extension Array {
+    mutating func shuffle() {
+        for _ in 0..<((count>0) ? (count-1) : 0) {
+            sort { (_,_) in arc4random() < arc4random() }
+        }
+    }
+}
+
 class AnswerMAViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var optionsTable: UITableView!
@@ -34,7 +42,6 @@ class AnswerMAViewController: UIViewController,UITableViewDelegate, UITableViewD
         self.navigationItem.rightBarButtonItems = [answerBtn, saveBtn]
         optionsTable.delegate = self
         optionsTable.dataSource = self
-        optionsTable.setEditing(true, animated: true)
         optionsTable2nd.delegate = self
         optionsTable2nd.dataSource = self
         optionsTable2nd.setEditing(true, animated: true)
@@ -60,9 +67,7 @@ class AnswerMAViewController: UIViewController,UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         if (tableView == optionsTable)
         {
-            let holder = leftArray[sourceIndexPath.row]
-            leftArray.remove(at: sourceIndexPath.row)
-            leftArray.insert(holder, at: destinationIndexPath.row)
+           
         } else {
             let holder = rightArray[sourceIndexPath.row]
             rightArray.remove(at: sourceIndexPath.row)
@@ -98,6 +103,8 @@ class AnswerMAViewController: UIViewController,UITableViewDelegate, UITableViewD
 
     
     
+    
+    
     func getData() {
         print(FIRDatabase.database().reference())
         
@@ -108,6 +115,7 @@ class AnswerMAViewController: UIViewController,UITableViewDelegate, UITableViewD
                 self.questionTextView.text  = self.questionDictionary["text"] as! String
                 self.leftArray = questionDict["left options"] as! [String]
                 self.rightArray = questionDict["right options"] as! [String]
+                //self.rightArray = self.shuffleArray(array: self.rightArray)
                 self.optionsTable.reloadData()
                 self.optionsTable2nd.reloadData()
                 for question in questionDict {
@@ -129,6 +137,19 @@ class AnswerMAViewController: UIViewController,UITableViewDelegate, UITableViewD
         //self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("answer").child("left options").setValue(leftArray)
         self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("right options").setValue(rightArray)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func shuffleArray<T>(array: Array<T>) -> Array<T>
+    {
+        var theArray = array
+        for index in (2...array.count - 1).reversed()
+        {
+            var j = Int(arc4random_uniform(UInt32(index-1)))
+            let holder = theArray[index]
+            theArray[index] = array[j]
+            theArray[j] = holder
+        }
+        return theArray
     }
 
 }

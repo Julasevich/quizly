@@ -119,20 +119,20 @@ class QuizResultViewController: UIViewController, UITableViewDelegate, UITableVi
                         }
                     }else if type == "MT" {
                         self.totalQuestions += 1
-                        let correctAnswer =  questionDict[question.key]?["right options"] as! NSArray
-                        let answer = self.resultDictionary[question.key]?["right options"] as! NSArray
-                        if String(describing: correctAnswer) == String(describing: answer) {
+                        let correctAnswer =  questionDict[question.key]?["right options"] as? [String]
+                        let answer = self.resultDictionary[question.key]?["right options"] as? [String]
+                        if correctAnswer!.elementsEqual(answer!) {
                             print("Correct")
                             self.rightCodes.append(question.key)
                             self.totalCorrect += 1
                         }
                     }else if type == "RA" {
                         self.totalQuestions += 1
-                        let correctAnswer =  questionDict[question.key]?["ranks"]!
+                        let correctAnswer =  questionDict[question.key]?["options"]! as! [String]
                         print(correctAnswer)
-                        let answer = self.resultDictionary[question.key]?["answer"]!
+                        let answer = self.resultDictionary[question.key]?["answer"]! as! [String]
                         print(answer)
-                        if String(describing: correctAnswer) == String(describing: answer) {
+                        if correctAnswer.elementsEqual(answer) {
                             print("Correct")
                             self.rightCodes.append(question.key)
                             self.totalCorrect += 1
@@ -142,8 +142,8 @@ class QuizResultViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
             self.resultTable.reloadData()
-            self.grade = self.totalCorrect / self.totalQuestions
-            self.resultGradeLabel.text = "Youre grade is: \(self.grade).  Reminder, essay question marked wrong until graded."
+            self.grade = self.totalCorrect / self.totalQuestions * 100
+            self.resultGradeLabel.text = "Youre grade is: \(Int(self.grade))%.  Reminder, essay question will not be included in your score."
         })
         
     }

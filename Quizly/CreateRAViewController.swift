@@ -61,10 +61,8 @@ class CreateRAViewController: UIViewController, UITableViewDelegate, UITableView
             if start == false
             {
                 options[indexPath.row] = cell.optionTF.text!
-                ranks[indexPath.row] = cell.rankTF.text!
             } else {
                 cell.optionTF.text = options[indexPath.row]
-                cell.rankTF.text = ranks[indexPath.row]
             }
             
             if indexPath.row == options.count-1
@@ -73,7 +71,6 @@ class CreateRAViewController: UIViewController, UITableViewDelegate, UITableView
             }
             
             if questionnaireType == "Survey" {
-                cell.rankTF.isHidden = true
                 cell.rankLabel.isHidden = true
             }
             return cell
@@ -105,9 +102,7 @@ class CreateRAViewController: UIViewController, UITableViewDelegate, UITableView
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("text").setValue(questionText)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("options").setValue(options)
         self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("type").setValue("RA")
-        if questionnaireType == "Quiz" {
-            self.ref.child(questionnaireType).child(questionnaireID).child("questions").child(questionID).child("ranks").setValue(ranks)
-        }
+        
         self.performSegue(withIdentifier: "addRAToAddQuestion", sender: self)
     }
     
