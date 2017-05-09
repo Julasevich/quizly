@@ -71,11 +71,9 @@ class AnswerTFViewController: UIViewController,UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row != 0
-        {
-            selectedRow = indexPath.row
-            optionsTable.reloadData()
-        }
+        selectedRow = indexPath.row
+        optionsTable.reloadData()
+        
         
     }
 

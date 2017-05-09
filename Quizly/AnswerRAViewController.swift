@@ -10,14 +10,16 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class AnswerRAViewController: UIViewController {
+class AnswerRAViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var dataTable: UITableView!
     var selectedQuestionCode = ""
     var selectedCode = ""
     var selectedType = ""
     var selectedQuestionType = ""
     var questionDictionary = [String:AnyObject]()
+    var optionsArray = [String]()
     var questionText = ""
     var resultCode = ""
     var ref: FIRDatabaseReference!
@@ -28,6 +30,9 @@ class AnswerRAViewController: UIViewController {
         let saveBtn:UIBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveOption))
         let answerBtn:UIBarButtonItem = UIBarButtonItem(title: "Answer", style: .plain, target: self, action: #selector(answerQuestion))
         self.navigationItem.rightBarButtonItems = [answerBtn, saveBtn]
+        dataTable.delegate = self
+        dataTable.dataSource = self
+        dataTable.setEditing(true, animated: true)
         getData()
 
     }
@@ -36,6 +41,41 @@ class AnswerRAViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        let holder = optionsArray[sourceIndexPath.row]
+        optionsArray.remove(at: sourceIndexPath.row)
+        optionsArray.insert(holder, at: destinationIndexPath.row)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.none
+    }
+    
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return optionsArray.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = optionsArray[indexPath.row]
+        return cell
+    }
+
     
 
     /*
@@ -55,7 +95,9 @@ class AnswerRAViewController: UIViewController {
         ref.child(selectedType).child(selectedCode).child("questions").child(selectedQuestionCode).observeSingleEvent(of: .value, with: { (snapshot) in
             if let questionDict = snapshot.value as? [String:AnyObject] {
                 self.questionDictionary = questionDict
+                self.optionsArray = questionDict["options"] as! [String]
                 self.questionTextView.text  = self.questionDictionary["text"] as! String
+                self.dataTable.reloadData()
                 for question in questionDict {
                     //self.questionCodes.append(question.key)
                 }
@@ -64,12 +106,13 @@ class AnswerRAViewController: UIViewController {
     }
     
     func saveOption() {
-        //optionsTable.reloadData()
+        dataTable.reloadData()
         
     }
     
     func answerQuestion() {
         ref = FIRDatabase.database().reference()
+        self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("answer").setValue(optionsArray)
         self.navigationController?.popViewController(animated: true)
     }
 
