@@ -10,6 +10,8 @@ import UIKit
 
 class SurveyResultViewController: UIViewController {
 
+    @IBOutlet weak var surveyResultTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let homeBtn:UIBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(home))

@@ -12,6 +12,7 @@
 		2338E6CA1EC20903002E8E1E /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6C91EC20903002E8E1E /* QuizResultViewController.swift */; };
 		2338E6CE1EC2251C002E8E1E /* QuizResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6CD1EC2251C002E8E1E /* QuizResultCell.swift */; };
 		2338E6D01EC22D16002E8E1E /* SurveyResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6CF1EC22D16002E8E1E /* SurveyResultViewController.swift */; };
+		2338E6D21EC27A81002E8E1E /* SurveyResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6D11EC27A81002E8E1E /* SurveyResultTableViewCell.swift */; };
 		237B84DA1E7EBDB900C24875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B84D91E7EBDB900C24875 /* AppDelegate.swift */; };
 		237B84DC1E7EBDB900C24875 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B84DB1E7EBDB900C24875 /* ViewController.swift */; };
 		237B84DF1E7EBDB900C24875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237B84DD1E7EBDB900C24875 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		2338E6C91EC20903002E8E1E /* QuizResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 		2338E6CD1EC2251C002E8E1E /* QuizResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultCell.swift; sourceTree = "<group>"; };
 		2338E6CF1EC22D16002E8E1E /* SurveyResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyResultViewController.swift; sourceTree = "<group>"; };
+		2338E6D11EC27A81002E8E1E /* SurveyResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyResultTableViewCell.swift; sourceTree = "<group>"; };
 		237B84D61E7EBDB900C24875 /* Quizly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237B84D91E7EBDB900C24875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		237B84DB1E7EBDB900C24875 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				2338E6CF1EC22D16002E8E1E /* SurveyResultViewController.swift */,
+				2338E6D11EC27A81002E8E1E /* SurveyResultTableViewCell.swift */,
 				23AFA80C1EBF63CB0054A33D /* Answer */,
 				237B85161E7EC8B100C24875 /* TitleViewController.swift */,
 				23C4DE671E8AEE7000E46E45 /* Questions */,
@@ -790,6 +793,7 @@
 				237B85211E7ED00F00C24875 /* QuestionTypeTableViewCell.swift in Sources */,
 				2338E6D01EC22D16002E8E1E /* SurveyResultViewController.swift in Sources */,
 				23C4DE5F1E8836AB00E46E45 /* EditQuestionsViewController.swift in Sources */,
+				2338E6D21EC27A81002E8E1E /* SurveyResultTableViewCell.swift in Sources */,
 				237D19021E857B23001E416B /* CreateRAViewController.swift in Sources */,
 				237B85301E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift in Sources */,
 				23AFA8121EBF657A0054A33D /* AnswerTFViewController.swift in Sources */,
