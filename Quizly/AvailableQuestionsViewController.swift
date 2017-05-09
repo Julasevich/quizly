@@ -20,18 +20,24 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
     var questionDictionary = [String:AnyObject]()
     var questionCodes = [String]()
     var ref: FIRDatabaseReference!
-    
+    var canSubmit = false
+    var submitBtn:UIBarButtonItem!
     @IBOutlet weak var availableQuestionsTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let submitBtn:UIBarButtonItem = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(submit))
+        submitBtn = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(submit))
+        submitBtn.isEnabled = false
         self.navigationItem.rightBarButtonItems = [submitBtn]
         getData()
         print(resultCode)
         //Delegate
         availableQuestionsTable.delegate = self
         availableQuestionsTable.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        checkCompletion()
     }
     
     override func didReceiveMemoryWarning() {
@@ -149,6 +155,23 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
                     self.questionCodes.append(question.key)
                 }
             }
+        })
+        
+    }
+    
+    func checkCompletion()
+    {
+        ref.child("Results").child(resultCode).child(selectedCode).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let dict = snapshot.value as? NSDictionary
+            {
+                print(dict.allKeys)
+                if dict.allKeys.count == self.questionDictionary.count {
+                    self.canSubmit = true
+                    self.submitBtn.isEnabled = true
+                    
+                }
+            }
+            
         })
     }
     
