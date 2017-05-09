@@ -130,7 +130,7 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
             destination.selectedQuestionType = selectedQuestionType
             destination.resultCode = resultCode
         } else if segue.identifier == "availableToQuizResult" {
-            let destination = segue.destination as! QuizResultiewController
+            let destination = segue.destination as! QuizResultViewController
             destination.selectedCode = selectedCode
             destination.selectedQuestionCode = selectedQuestionCode
             destination.selectedType = selectedType

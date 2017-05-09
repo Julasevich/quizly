@@ -126,8 +126,8 @@ class AnswerMAViewController: UIViewController,UITableViewDelegate, UITableViewD
     
     func answerQuestion() {
         ref = FIRDatabase.database().reference()
-        self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("answer").child("left options").setValue(leftArray)
-        self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("answer").child("right options").setValue(rightArray)
+        //self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("answer").child("left options").setValue(leftArray)
+        self.ref.child("Results").child(resultCode).child(selectedCode).child(selectedQuestionCode).child("right options").setValue(rightArray)
         self.navigationController?.popViewController(animated: true)
     }
 
