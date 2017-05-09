@@ -784,6 +784,27 @@
             </objects>
             <point key="canvasLocation" x="3951.5625" y="4531.640625"/>
         </scene>
+        <!--Survey Result View Controller-->
+        <scene sceneID="eAF-Z9-Fq1">
+            <objects>
+                <viewController id="Xqx-BF-X1w" customClass="SurveyResultViewController" customModule="Quizly" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HGJ-pE-iza"/>
+                        <viewControllerLayoutGuide type="bottom" id="HMM-l4-L1b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dek-eP-8pG">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="surveyResultsToHome" id="0r7-JS-kbp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5TS-KR-cO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="-664"/>
+        </scene>
         <!--Available Questionnaires View Controller-->
         <scene sceneID="x5b-mK-v8M">
             <objects>
@@ -862,6 +883,7 @@
                         <segue destination="1gX-b3-vbx" kind="show" identifier="availableToES" id="90v-ti-IV6"/>
                         <segue destination="xPD-JX-a9w" kind="show" identifier="availableToRA" id="C9k-FL-udH"/>
                         <segue destination="7zs-jV-4Qw" kind="show" identifier="availableToQuizResult" id="oMN-zi-543"/>
+                        <segue destination="Xqx-BF-X1w" kind="show" identifier="availableToSurveyResult" id="yzS-eN-GnI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVY-ua-gwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1233,7 +1255,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="trb-19-Keg"/>
         <segue reference="e31-Zj-gl9"/>
-        <segue reference="ge2-6d-LAh"/>
+        <segue reference="0r7-JS-kbp"/>
         <segue reference="9QC-G1-Niw"/>
         <segue reference="jBs-Z8-qak"/>
         <segue reference="Nmw-cv-d31"/>

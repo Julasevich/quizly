@@ -156,7 +156,7 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
         if selectedType == "Quiz" {
             self.performSegue(withIdentifier: "availableToQuizResult", sender: self)
         } else {
-            
+            self.performSegue(withIdentifier: "availableToSurveyResult", sender: self)
         }
     
     }
