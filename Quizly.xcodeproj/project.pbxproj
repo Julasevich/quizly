@@ -10,6 +10,7 @@
 		2338E6C61EBF738F002E8E1E /* AnswerSAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6C51EBF738F002E8E1E /* AnswerSAViewController.swift */; };
 		2338E6C81EBF73BB002E8E1E /* AnswerESViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6C71EBF73BB002E8E1E /* AnswerESViewController.swift */; };
 		2338E6CA1EC20903002E8E1E /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6C91EC20903002E8E1E /* QuizResultViewController.swift */; };
+		2338E6CE1EC2251C002E8E1E /* QuizResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2338E6CD1EC2251C002E8E1E /* QuizResultCell.swift */; };
 		237B84DA1E7EBDB900C24875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B84D91E7EBDB900C24875 /* AppDelegate.swift */; };
 		237B84DC1E7EBDB900C24875 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B84DB1E7EBDB900C24875 /* ViewController.swift */; };
 		237B84DF1E7EBDB900C24875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237B84DD1E7EBDB900C24875 /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		2338E6C51EBF738F002E8E1E /* AnswerSAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSAViewController.swift; sourceTree = "<group>"; };
 		2338E6C71EBF73BB002E8E1E /* AnswerESViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerESViewController.swift; sourceTree = "<group>"; };
 		2338E6C91EC20903002E8E1E /* QuizResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
+		2338E6CD1EC2251C002E8E1E /* QuizResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultCell.swift; sourceTree = "<group>"; };
 		237B84D61E7EBDB900C24875 /* Quizly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237B84D91E7EBDB900C24875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		237B84DB1E7EBDB900C24875 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				237B852D1E7F114100C24875 /* AvailableQuestionnairesViewController.swift */,
 				237B852F1E7F115200C24875 /* AvailableQuestionnairesTableViewCell.swift */,
 				2338E6C91EC20903002E8E1E /* QuizResultViewController.swift */,
+				2338E6CD1EC2251C002E8E1E /* QuizResultCell.swift */,
 			);
 			name = Take;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				237D18EC1E8567C5001E416B /* CreateMultipleChoiceTableViewCell.swift in Sources */,
 				237B84E21E7EBDB900C24875 /* Quizly.xcdatamodeld in Sources */,
 				2338E6C61EBF738F002E8E1E /* AnswerSAViewController.swift in Sources */,
+				2338E6CE1EC2251C002E8E1E /* QuizResultCell.swift in Sources */,
 				23AFA8181EBF692A0054A33D /* AnswerMAViewController.swift in Sources */,
 				5220F9D21E89D2C0008D9BA0 /* Answers.swift in Sources */,
 				237B851E1E7ECB0800C24875 /* AddQuestionTableViewCell.swift in Sources */,

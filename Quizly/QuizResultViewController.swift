@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class QuizResultViewController: UIViewController {
+class QuizResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var selectedQuestionCode = ""
     var selectedCode = ""
@@ -19,6 +19,8 @@ class QuizResultViewController: UIViewController {
     var resultCode = ""
     var questionDictionary = [String:AnyObject]()
     var resultDictionary = [String:AnyObject]()
+    var questionCodes = [String]()
+    var rightCodes = [String]()
     var questionText = ""
     var totalQuestions = 0.0
     var totalCorrect = 0.0
@@ -27,9 +29,14 @@ class QuizResultViewController: UIViewController {
 
     @IBOutlet weak var resultCodeLabel: UILabel!
     @IBOutlet weak var resultGradeLabel: UILabel!
+    @IBOutlet weak var resultTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let homeBtn:UIBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(home))
+        self.navigationItem.rightBarButtonItems = [homeBtn]
+        resultTable.delegate = self
+        resultTable.dataSource = self
         resultCodeLabel.text = "Your result ID: \(resultCode)"
         resultGradeLabel.text = "Calculating Grade"
         getData()
@@ -43,12 +50,37 @@ class QuizResultViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Results"
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return resultDictionary.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "quizResultCell", for: indexPath) as! QuizResultCell
+            cell.textLabel?.text = "Question \(indexPath.row + 1): \(questionDictionary[questionCodes[indexPath.row]]?["text"] as! String)"
+        cell.textLabel?.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+        if rightCodes.contains(questionCodes[indexPath.row]) {
+            cell.backgroundColor = UIColor.green.withAlphaComponent(0.2)
+        } else {
+            cell.backgroundColor = UIColor.red.withAlphaComponent(0.2)
+        }
+        return cell
+    }
 
     func getData() {
         ref = FIRDatabase.database().reference()
         ref.child("Results").child(resultCode).child(selectedCode).observeSingleEvent(of: .value, with: { (snapshot) in
             if let resultDict = snapshot.value as? [String:AnyObject] {
                 self.resultDictionary = resultDict
+                //self.resultTable.reloadData()
             }
         })
         
@@ -56,6 +88,7 @@ class QuizResultViewController: UIViewController {
             if let questionDict = snapshot.value as? [String:AnyObject] {
                 self.questionDictionary = questionDict
                 for question in questionDict {
+                    self.questionCodes.append(question.key)
                     let type = questionDict[question.key]?["type"] as! String
                     if type == "MC" {
                         self.totalQuestions += 1
@@ -63,6 +96,7 @@ class QuizResultViewController: UIViewController {
                         let answer  = self.resultDictionary[question.key]?["answer"]!
                         if String(describing: answer) == String(describing: correctAnswer) {
                             print("Correct")
+                            self.rightCodes.append(question.key)
                             self.totalCorrect += 1
                         }
                     }else if type == "TF" {
@@ -71,6 +105,7 @@ class QuizResultViewController: UIViewController {
                         let answer  = self.resultDictionary[question.key]?["answer"]!
                         if String(describing: answer) == String(describing: correctAnswer) {
                             print("Correct")
+                            self.rightCodes.append(question.key)
                             self.totalCorrect += 1
                         }
                     }else if type == "SA" {
@@ -79,6 +114,7 @@ class QuizResultViewController: UIViewController {
                         let answer  = self.resultDictionary[question.key]?["answer"]!
                         if String(describing: answer).lowercased() == String(describing: correctAnswer).lowercased() {
                             print("Correct")
+                            self.rightCodes.append(question.key)
                             self.totalCorrect += 1
                         }
                     }else if type == "MT" {
@@ -87,6 +123,7 @@ class QuizResultViewController: UIViewController {
                         let answer = self.resultDictionary[question.key]?["right options"] as! NSArray
                         if String(describing: correctAnswer) == String(describing: answer) {
                             print("Correct")
+                            self.rightCodes.append(question.key)
                             self.totalCorrect += 1
                         }
                     }else if type == "RA" {
@@ -97,16 +134,22 @@ class QuizResultViewController: UIViewController {
                         print(answer)
                         if String(describing: correctAnswer) == String(describing: answer) {
                             print("Correct")
+                            self.rightCodes.append(question.key)
                             self.totalCorrect += 1
                         }
                     }
                     
                 }
             }
+            self.resultTable.reloadData()
             self.grade = self.totalCorrect / self.totalQuestions
-            self.resultGradeLabel.text = "Youre grade is: \(self.grade)"
+            self.resultGradeLabel.text = "Youre grade is: \(self.grade).  Reminder, essay question marked wrong until graded."
         })
         
+    }
+    
+    func home() {
+        self.performSegue(withIdentifier: "resultsToHome", sender: self)
     }
 
 }

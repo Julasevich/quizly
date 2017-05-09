@@ -18,7 +18,7 @@ class AnswerTFViewController: UIViewController,UITableViewDelegate, UITableViewD
     var selectedQuestionType = ""
     var questionText = ""
     var ref: FIRDatabaseReference!
-    var selectedRow = 1
+    var selectedRow = 0
     var resultCode = ""
     var questionDictionary = [String:AnyObject]()
     @IBOutlet var optionsTable: UITableView!
