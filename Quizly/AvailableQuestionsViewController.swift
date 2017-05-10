@@ -142,6 +142,9 @@ class AvailableQuestionsViewController: UIViewController, UITableViewDataSource,
             destination.selectedType = selectedType
             destination.selectedQuestionType = selectedQuestionType
             destination.resultCode = resultCode
+        }else if segue.identifier == "availableToSurveyResult" {
+            let destination = segue.destination as! SurveyResultViewController
+            destination.surveyID = selectedCode
         }
     }
     
