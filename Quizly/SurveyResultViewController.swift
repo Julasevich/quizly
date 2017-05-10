@@ -71,6 +71,21 @@ class SurveyResultViewController: UIViewController,UITableViewDelegate, UITableV
             cell.tabLabel.text = resp
         }
         
+        if questionList[indexPath.row].type == "RA"
+        {
+            var resp = "Responses: "
+            for r in questionList[indexPath.row].responses
+            {
+                if (r != "")
+                {
+                    resp += " " + r + ","
+                }
+            }
+            resp.remove(at: resp.index(before: resp.endIndex))
+            print(resp)
+            cell.tabLabel.text = resp
+        }
+        
         if questionList[indexPath.row].type == "TF"
         {
             var trues = 0
@@ -129,7 +144,7 @@ class SurveyResultViewController: UIViewController,UITableViewDelegate, UITableV
                     
                     //Disable matching and sa 
                     
-                    if (type != "MT" && type != "RA")
+                    if (type != "MT")
                     {
                         let question = surveyQuestion(id: id, text: name, type: type, responses: [], intRespones: [:], multChoiceOptions: opt)
                         self.questionList.append(question)
@@ -164,6 +179,9 @@ class SurveyResultViewController: UIViewController,UITableViewDelegate, UITableV
                                     if self.questionList[index].type == "SA"
                                     {
                                         self.questionList[index].responses.append(answer.object(forKey: "answer") as! String)
+                                    } else if self.questionList[index].type == "RA"
+                                    {
+                                        self.questionList[index].responses.append("(\((answer.object(forKey: "answer") as! [String]).joined(separator: ",")))")
                                     }
                                     else if self.questionList[index].type == "TF"
                                     {
