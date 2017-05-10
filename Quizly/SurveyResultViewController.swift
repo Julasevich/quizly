@@ -84,7 +84,7 @@ class SurveyResultViewController: UIViewController,UITableViewDelegate, UITableV
                 trues = questionList[indexPath.row].intRespones["0"]!
             }
             
-            var resp = "Responses: True: \(trues)) False:\(falses)"
+            var resp = "Responses: True: \(trues) False:\(falses)"
             
             cell.tabLabel.text = resp
         }
@@ -125,6 +125,9 @@ class SurveyResultViewController: UIViewController,UITableViewDelegate, UITableV
                     {
                         opt = (quizDict.value(forKey: id) as! NSDictionary).value(forKey: "options") as! [String]
                     }
+                    
+                    
+                    //Disable matching and sa 
                     
                     if (type != "MT" && type != "RA")
                     {

@@ -62,6 +62,11 @@
 		5220F9CE1E89C72B008D9BA0 /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220F9CD1E89C72B008D9BA0 /* Questionnaire.swift */; };
 		5220F9D01E89D28E008D9BA0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220F9CF1E89D28E008D9BA0 /* Question.swift */; };
 		5220F9D21E89D2C0008D9BA0 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5220F9D11E89D2C0008D9BA0 /* Answers.swift */; };
+		523FE1B51EC2BDD0000AF8C8 /* grizzly.png in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1B41EC2BDD0000AF8C8 /* grizzly.png */; };
+		523FE1B71EC2D104000AF8C8 /* pawprint.gif in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1B61EC2D104000AF8C8 /* pawprint.gif */; };
+		523FE1B91EC2D117000AF8C8 /* pawprint.gif in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1B81EC2D117000AF8C8 /* pawprint.gif */; };
+		523FE1BB1EC2D3B4000AF8C8 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1BA1EC2D3B4000AF8C8 /* icon.jpg */; };
+		523FE1BD1EC2D5A6000AF8C8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1BC1EC2D5A6000AF8C8 /* icon.png */; };
 		959729B9A85D4A0E4BCCD32A /* Pods_Quizly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */; };
 		C2E81958D6352E958741A58F /* Pods_QuizlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D66C8BCAFD10D0D989722E /* Pods_QuizlyUITests.framework */; };
 /* End PBXBuildFile section */
@@ -148,6 +153,11 @@
 		5220F9CD1E89C72B008D9BA0 /* Questionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
 		5220F9CF1E89D28E008D9BA0 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5220F9D11E89D2C0008D9BA0 /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
+		523FE1B41EC2BDD0000AF8C8 /* grizzly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grizzly.png; path = ../grizzly.png; sourceTree = "<group>"; };
+		523FE1B61EC2D104000AF8C8 /* pawprint.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pawprint.gif; sourceTree = "<group>"; };
+		523FE1B81EC2D117000AF8C8 /* pawprint.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pawprint.gif; sourceTree = "<group>"; };
+		523FE1BA1EC2D3B4000AF8C8 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		523FE1BC1EC2D5A6000AF8C8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		609A8D806408005FA0666B1B /* Pods-QuizlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyUITests/Pods-QuizlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA046484A56FD62DD3DE2B9 /* Pods-QuizlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyTests/Pods-QuizlyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +196,7 @@
 		237B84CD1E7EBDB900C24875 = {
 			isa = PBXGroup;
 			children = (
+				523FE1B81EC2D117000AF8C8 /* pawprint.gif */,
 				237B84D81E7EBDB900C24875 /* Quizly */,
 				237B84F01E7EBDB900C24875 /* QuizlyTests */,
 				237B84FB1E7EBDB900C24875 /* QuizlyUITests */,
@@ -208,6 +219,9 @@
 		237B84D81E7EBDB900C24875 /* Quizly */ = {
 			isa = PBXGroup;
 			children = (
+				523FE1B41EC2BDD0000AF8C8 /* grizzly.png */,
+				523FE1BC1EC2D5A6000AF8C8 /* icon.png */,
+				523FE1BA1EC2D3B4000AF8C8 /* icon.jpg */,
 				23C4DE661E893B2C00E46E45 /* Objects */,
 				237B850E1E7EC0D600C24875 /* MainViewController.swift */,
 				237B850B1E7EBF6E00C24875 /* Create */,
@@ -215,6 +229,7 @@
 				237B84D91E7EBDB900C24875 /* AppDelegate.swift */,
 				237B84DB1E7EBDB900C24875 /* ViewController.swift */,
 				237B84DD1E7EBDB900C24875 /* Main.storyboard */,
+				523FE1B61EC2D104000AF8C8 /* pawprint.gif */,
 				237B84E31E7EBDB900C24875 /* Assets.xcassets */,
 				237B84E51E7EBDB900C24875 /* LaunchScreen.storyboard */,
 				237D19041E87E745001E416B /* GoogleService-Info.plist */,
@@ -585,10 +600,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523FE1BB1EC2D3B4000AF8C8 /* icon.jpg in Resources */,
 				237B84E71E7EBDB900C24875 /* LaunchScreen.storyboard in Resources */,
+				523FE1BD1EC2D5A6000AF8C8 /* icon.png in Resources */,
+				523FE1B71EC2D104000AF8C8 /* pawprint.gif in Resources */,
 				237D19051E87E745001E416B /* GoogleService-Info.plist in Resources */,
+				523FE1B51EC2BDD0000AF8C8 /* grizzly.png in Resources */,
 				237B84E41E7EBDB900C24875 /* Assets.xcassets in Resources */,
 				237B84DF1E7EBDB900C24875 /* Main.storyboard in Resources */,
+				523FE1B91EC2D117000AF8C8 /* pawprint.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,6 +973,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U57BQ7LWFP;
 				INFOPLIST_FILE = Quizly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QuizlyLLC.Quizly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -967,6 +988,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U57BQ7LWFP;
 				INFOPLIST_FILE = Quizly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QuizlyLLC.Quizly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
