@@ -58,6 +58,7 @@
                                 <rect key="frame" x="20" y="687" width="353" height="245"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58643830128205132" green="0.47828520665523355" blue="0.32673028633527118" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Take" backgroundImage="grizzly.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -195,6 +196,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="toonvectors-9832-140.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FST-7N-FzW">
+                                <rect key="frame" x="170" y="443" width="429" height="516"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -210,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HzQ-j4-X9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98" y="1610"/>
+            <point key="canvasLocation" x="-98.4375" y="1609.5703125"/>
         </scene>
         <!--Select Type View Controller-->
         <scene sceneID="3hp-h9-YTv">
@@ -323,7 +328,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addQuestionCell" id="JAk-fG-DlL" customClass="AddQuestionTableViewCell" customModule="Quizly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JAk-fG-DlL" id="4Dh-Wh-sK3">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
@@ -410,6 +415,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="toonvectors-9832-140.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Lo5-qW-f1h">
+                                <rect key="frame" x="170" y="443" width="429" height="516"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1278,15 +1287,16 @@
     <resources>
         <image name="grizzly.png" width="500" height="376"/>
         <image name="pawprint.gif" width="424" height="400"/>
+        <image name="toonvectors-9832-140.jpg" width="140" height="140"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e31-Zj-gl9"/>
-        <segue reference="iCI-7G-ryE"/>
-        <segue reference="g05-1s-hoZ"/>
-        <segue reference="Nmw-cv-d31"/>
-        <segue reference="jBs-Z8-qak"/>
-        <segue reference="bRm-wn-foI"/>
-        <segue reference="9QC-G1-Niw"/>
+        <segue reference="caZ-sX-SFV"/>
+        <segue reference="aE6-mK-UOT"/>
+        <segue reference="H3C-M7-RHs"/>
+        <segue reference="g5y-Bp-2RF"/>
+        <segue reference="Njc-cD-bHh"/>
+        <segue reference="1xh-za-4ow"/>
         <segue reference="trb-19-Keg"/>
+        <segue reference="L9g-b0-jWA"/>
     </inferredMetricsTieBreakers>
 </document>

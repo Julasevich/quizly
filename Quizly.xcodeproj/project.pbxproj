@@ -67,6 +67,7 @@
 		523FE1B91EC2D117000AF8C8 /* pawprint.gif in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1B81EC2D117000AF8C8 /* pawprint.gif */; };
 		523FE1BB1EC2D3B4000AF8C8 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1BA1EC2D3B4000AF8C8 /* icon.jpg */; };
 		523FE1BD1EC2D5A6000AF8C8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1BC1EC2D5A6000AF8C8 /* icon.png */; };
+		523FE1BF1EC2D7E3000AF8C8 /* toonvectors-9832-140.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523FE1BE1EC2D7E3000AF8C8 /* toonvectors-9832-140.jpg */; };
 		959729B9A85D4A0E4BCCD32A /* Pods_Quizly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A42E7F739F2CE09596101DA /* Pods_Quizly.framework */; };
 		C2E81958D6352E958741A58F /* Pods_QuizlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D66C8BCAFD10D0D989722E /* Pods_QuizlyUITests.framework */; };
 /* End PBXBuildFile section */
@@ -158,6 +159,7 @@
 		523FE1B81EC2D117000AF8C8 /* pawprint.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pawprint.gif; sourceTree = "<group>"; };
 		523FE1BA1EC2D3B4000AF8C8 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 		523FE1BC1EC2D5A6000AF8C8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		523FE1BE1EC2D7E3000AF8C8 /* toonvectors-9832-140.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "toonvectors-9832-140.jpg"; sourceTree = "<group>"; };
 		609A8D806408005FA0666B1B /* Pods-QuizlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyUITests/Pods-QuizlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FB95B09977D2BDE48EDAF82 /* Pods_QuizlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA046484A56FD62DD3DE2B9 /* Pods-QuizlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizlyTests/Pods-QuizlyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				237B84D91E7EBDB900C24875 /* AppDelegate.swift */,
 				237B84DB1E7EBDB900C24875 /* ViewController.swift */,
 				237B84DD1E7EBDB900C24875 /* Main.storyboard */,
+				523FE1BE1EC2D7E3000AF8C8 /* toonvectors-9832-140.jpg */,
 				523FE1B61EC2D104000AF8C8 /* pawprint.gif */,
 				237B84E31E7EBDB900C24875 /* Assets.xcassets */,
 				237B84E51E7EBDB900C24875 /* LaunchScreen.storyboard */,
@@ -606,6 +609,7 @@
 				523FE1B71EC2D104000AF8C8 /* pawprint.gif in Resources */,
 				237D19051E87E745001E416B /* GoogleService-Info.plist in Resources */,
 				523FE1B51EC2BDD0000AF8C8 /* grizzly.png in Resources */,
+				523FE1BF1EC2D7E3000AF8C8 /* toonvectors-9832-140.jpg in Resources */,
 				237B84E41E7EBDB900C24875 /* Assets.xcassets in Resources */,
 				237B84DF1E7EBDB900C24875 /* Main.storyboard in Resources */,
 				523FE1B91EC2D117000AF8C8 /* pawprint.gif in Resources */,
